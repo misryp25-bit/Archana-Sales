@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ArchanaSales – Fosroc | Asian Paints | PPG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg:#f5f7fc;--bg2:#eef1f8;--white:#ffffff;--navy:#0d2257;--blue:#1a56db;
+    --blue-light:#3b82f6;--blue-pale:#dbeafe;--blue-xpale:#eff6ff;
+    --text:#0f172a;--body:#374151;--muted:#6b7280;--border:#e2e8f0;
+    --shadow:0 4px 24px rgba(13,34,87,0.08);--shadow-lg:0 12px 48px rgba(13,34,87,0.13);
+    --fosroc:#dc2626;--asian:#1d4ed8;--ppg:#16a34a;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;line-height:1.6}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:70px;box-shadow:0 2px 12px rgba(13,34,87,0.06)}
+  .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-logo-mark{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:800}
+  .nav-logo-text{font-weight:800;font-size:1.1rem;color:var(--navy)}
+  .nav-logo-text span{color:var(--blue)}
+  .nav-links{display:flex;gap:4px;list-style:none}
+  .nav-links a{color:var(--body);text-decoration:none;font-size:.875rem;font-weight:500;padding:7px 14px;border-radius:7px;transition:all .18s}
+  .nav-links a:hover{background:var(--blue-xpale);color:var(--blue)}
+  .nav-cta{background:var(--blue);color:#fff;padding:9px 22px;border-radius:8px;font-size:.875rem;font-weight:600;text-decoration:none;transition:all .18s;box-shadow:0 2px 8px rgba(26,86,219,.3)}
+  .nav-cta:hover{background:var(--navy);transform:translateY(-1px)}
+
+  /* HERO */
+  .hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#1a3a7a 55%,#1e4fa0 100%);display:flex;align-items:center;padding:120px 64px 80px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 78% 25%,rgba(59,130,246,.22) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 85%,rgba(14,165,233,.12) 0%,transparent 55%)}
+  .hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+  .hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center;position:relative;z-index:1}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:6px 16px;border-radius:24px;font-size:.78rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#93c5fd;margin-bottom:22px}
+  .hero-badge::before{content:'●';font-size:.48rem;color:#4ade80}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.4rem);font-weight:800;line-height:1.1;color:#fff;margin-bottom:22px;letter-spacing:-.5px}
+  .hero h1 span{background:linear-gradient(90deg,#93c5fd,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .hero-sub{color:#bfdbfe;font-size:1.03rem;line-height:1.75;max-width:490px;margin-bottom:38px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--navy);padding:13px 30px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+  .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+  .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25);padding:13px 30px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s}
+  .btn-ghost:hover{background:rgba(255,255,255,.18)}
+  .hero-right{display:flex;flex-direction:column;gap:16px}
+  .hero-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .hero-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px 20px;backdrop-filter:blur(8px);transition:background .2s}
+  .hero-stat:hover{background:rgba(255,255,255,.12)}
+  .hero-stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1}
+  .hero-stat-num span{color:#38bdf8}
+  .hero-stat-label{color:#93c5fd;font-size:.8rem;margin-top:5px;font-weight:500}
+
+  /* TRUST BAR */
+  .trust-bar{background:var(--white);border-bottom:1px solid var(--border);padding:18px 64px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+  .trust-item{display:flex;align-items:center;gap:9px;font-size:.84rem;font-weight:600;color:var(--body)}
+  .trust-div{width:1px;height:22px;background:var(--border)}
+
+  /* SECTIONS */
+  section{padding:96px 64px}
+  .section-header{text-align:center;margin-bottom:60px}
+  .section-eyebrow{display:inline-block;background:var(--blue-pale);color:var(--blue);padding:5px 14px;border-radius:20px;font-size:.76rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3vw,2.75rem);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:14px}
+  .section-sub{color:var(--muted);font-size:.97rem;max-width:530px;margin:0 auto;line-height:1.75}
+
+  /* BRANDS */
+  #brands{background:var(--bg2)}
+  .brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
+  .brand-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s}
+  .brand-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .brand-bar{height:5px}
+  .brand-bar.f{background:linear-gradient(90deg,#dc2626,#ef4444)}
+  .brand-bar.a{background:linear-gradient(90deg,#1d4ed8,#3b82f6)}
+  .brand-bar.p{background:linear-gradient(90deg,#16a34a,#22c55e)}
+  .brand-head{padding:26px 26px 18px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border)}
+  .brand-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+  .brand-icon.f{background:#fef2f2}.brand-icon.a{background:#eff6ff}.brand-icon.p{background:#f0fdf4}
+  .brand-name{font-weight:800;font-size:1.05rem;color:var(--navy)}
+  .brand-type{font-size:.76rem;color:var(--muted);margin-top:2px}
+  .brand-body{padding:18px 26px 26px}
+  .brand-desc{color:var(--body);font-size:.87rem;line-height:1.7;margin-bottom:16px}
+  .brand-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .brand-list li{display:flex;align-items:center;gap:9px;font-size:.85rem;color:var(--body)}
+  .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+  .dot.f{background:var(--fosroc)}.dot.a{background:var(--asian)}.dot.p{background:var(--ppg)}
+  .brand-badge{display:inline-block;margin-top:18px;padding:6px 14px;border-radius:6px;font-size:.74rem;font-weight:700;letter-spacing:.5px}
+  .brand-badge.f{background:#fef2f2;color:var(--fosroc)}.brand-badge.a{background:#eff6ff;color:var(--asian)}.brand-badge.p{background:#f0fdf4;color:var(--ppg)}
+
+  /* SERVICES */
+  #services{background:var(--white)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto}
+  .svc-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:30px 24px;transition:all .22s}
+  .svc-card:hover{background:var(--white);box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--blue-light)}
+  .svc-ico{width:50px;height:50px;border-radius:11px;background:var(--blue-xpale);border:1.5px solid var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:16px}
+  .svc-title{font-weight:700;font-size:.97rem;color:var(--navy);margin-bottom:9px}
+  .svc-desc{color:var(--muted);font-size:.86rem;line-height:1.7}
+
+  /* PROCESS */
+  #process{background:var(--navy)}
+  #process .section-eyebrow{background:rgba(147,197,253,.15);color:#93c5fd}
+  #process .section-title{color:#fff}
+  #process .section-sub{color:#93c5fd}
+  .process-track{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+  .process-track::before{content:'';position:absolute;top:35px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,rgba(59,130,246,.5),rgba(56,189,248,.5))}
+  .pstep{text-align:center;padding:0 16px}
+  .pstep-num{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.07);border:2px solid rgba(59,130,246,.45);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#93c5fd;position:relative;z-index:1;transition:all .22s}
+  .pstep:hover .pstep-num{background:var(--blue);border-color:var(--blue);color:#fff}
+  .pstep-title{font-weight:700;font-size:.92rem;color:#fff;margin-bottom:8px}
+  .pstep-desc{color:#93c5fd;font-size:.8rem;line-height:1.65}
+
+  /* ABOUT */
+  #about{background:var(--bg2)}
+  .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .about-card-wrap{position:relative}
+  .about-card-shadow{position:absolute;inset:16px -16px -16px 16px;background:var(--blue-pale);border-radius:20px;z-index:0}
+  .about-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:42px;box-shadow:var(--shadow-lg);position:relative;z-index:1}
+  .about-big{font-family:'Playfair Display',serif;font-size:5rem;font-weight:800;color:var(--blue);line-height:1}
+  .about-big-label{font-size:.82rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:4px 0 26px}
+  .about-hr{height:1px;background:var(--border);margin-bottom:22px}
+  .about-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .about-list li{display:flex;align-items:flex-start;gap:10px;font-size:.87rem;color:var(--body)}
+  .chk{width:20px;height:20px;border-radius:50%;background:var(--blue-pale);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.62rem;flex-shrink:0;margin-top:2px;font-weight:700}
+  .about-text .section-eyebrow{display:inline-block}
+  .about-text h3{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:800;color:var(--navy);line-height:1.2;margin:13px 0 18px}
+  .about-text p{color:var(--body);font-size:.92rem;line-height:1.8;margin-bottom:14px}
+  .btn-blue{display:inline-block;background:var(--blue);color:#fff;padding:13px 30px;border-radius:8px;font-weight:700;font-size:.88rem;text-decoration:none;margin-top:10px;box-shadow:0 4px 16px rgba(26,86,219,.25);transition:all .2s}
+  .btn-blue:hover{background:var(--navy);transform:translateY(-2px)}
+
+  /* CONTACT */
+  #contact{background:var(--white)}
+  .contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
+  .contact-left h3{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:800;color:var(--navy);margin-bottom:12px}
+  .contact-left>p{color:var(--muted);font-size:.92rem;line-height:1.75;margin-bottom:34px}
+  .c-row{display:flex;align-items:flex-start;gap:13px;margin-bottom:20px}
+  .c-ico{width:42px;height:42px;border-radius:10px;background:var(--blue-xpale);border:1px solid var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+  .c-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:3px}
+  .c-val{font-size:.91rem;color:var(--text);font-weight:500}
+  .contact-form{background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:38px;box-shadow:var(--shadow)}
+  .form-heading{font-weight:800;font-size:1.05rem;color:var(--navy);margin-bottom:22px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .fg{margin-bottom:17px}
+  .fg label{display:block;font-size:.76rem;font-weight:600;color:var(--body);text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px}
+  .fg input,.fg select,.fg textarea{width:100%;background:var(--white);border:1.5px solid var(--border);color:var(--text);padding:11px 13px;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .18s,box-shadow .18s}
+  .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+  .fg textarea{resize:vertical;min-height:95px}
+  .form-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.93rem;cursor:pointer;box-shadow:0 4px 16px rgba(26,86,219,.28);transition:all .2s}
+  .form-btn:hover:not(:disabled){background:var(--navy);transform:translateY(-2px)}
+  .form-btn:disabled{opacity:.7;cursor:not-allowed}
+
+  /* ALERT BOXES */
+  .alert-success{display:none;background:#f0fdf4;border:1.5px solid #86efac;border-radius:10px;padding:18px 20px;margin-bottom:18px}
+  .alert-success strong{color:#15803d;display:block;margin-bottom:3px}
+  .alert-success span{color:#166534;font-size:.86rem}
+  .alert-error{display:none;background:#fef2f2;border:1.5px solid #fca5a5;border-radius:10px;padding:18px 20px;margin-bottom:18px}
+  .alert-error strong{color:#dc2626;display:block;margin-bottom:3px}
+  .alert-error span{color:#991b1b;font-size:.86rem}
+
+  /* FOOTER */
+  footer{background:var(--navy);padding:36px 64px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  .f-brand{display:flex;align-items:center;gap:10px}
+  .f-mark{width:32px;height:32px;background:rgba(255,255,255,.12);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem;font-weight:800}
+  .f-name{font-weight:800;font-size:1rem;color:#fff}
+  .f-name span{color:#93c5fd}
+  .f-copy{color:rgba(255,255,255,.38);font-size:.78rem}
+  .f-chips{display:flex;gap:10px;flex-wrap:wrap}
+  .fchip{padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:600;border:1px solid}
+  .fchip.f{color:#fca5a5;border-color:rgba(252,165,165,.3)}
+  .fchip.a{color:#93c5fd;border-color:rgba(147,197,253,.3)}
+  .fchip.p{color:#86efac;border-color:rgba(134,239,172,.3)}
+
+  /* ANIMATIONS */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  .fu{animation:fadeUp .65s ease both}
+  .d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.35s}.d4{animation-delay:.48s}
+
+  @media(max-width:900px){
+    nav{padding:0 20px}.nav-links{display:none}
+    section{padding:64px 20px}
+    .hero{padding:100px 20px 60px}
+    .hero-inner,.brands-grid,.services-grid,.about-inner,.contact-inner{grid-template-columns:1fr;gap:32px}
+    .process-track{grid-template-columns:1fr 1fr;gap:32px}
+    .process-track::before{display:none}
+    .trust-bar{padding:14px 20px;gap:18px}
+    .trust-div{display:none}
+    footer{flex-direction:column;align-items:flex-start;padding:28px 20px}
+    .frow{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+	
+    	<img src="logo1.png" alt="Archana Sales" style="height:42px; width:auto;"/>
+	<div class="nav-logo-text"><span>Archana</span> Sales</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#brands">Products</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Place an Order</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-dots"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge fu">Authorised Dealer </div>
+      <h1 class="fu d1">Your Trusted<br/><span>Supply Partner</span> Since 2005<br/></h1>
+      <p class="hero-sub fu d2">We source premium products from Fosroc, Asian Paints &amp; Novoco Cement and handle bulk orders with fast, reliable dispatch to your site or store.</p>
+      <div class="hero-btns fu d3">
+        <a class="btn-white" href="#contact">Place Your Order</a>
+        <a class="btn-ghost" href="#brands">View Products</a>
+      </div>
+    </div>
+    <div class="hero-right fu d4">
+      <div class="hero-stat-row">
+        <div class="hero-stat"><div class="hero-stat-num">50,000<span>+</span></div><div class="hero-stat-label">Orders Dispatched</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">3</div><div class="hero-stat-label">Brand Partnerships</div></div>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat"><div class="hero-stat-num">48<span>H</span></div><div class="hero-stat-label">Avg. Dispatch Time</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">100<span>%</span></div><div class="hero-stat-label">Genuine Products</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">✅ GST Compliant Invoicing</div>
+  <div class="trust-div"></div>
+  <div class="trust-item">🏭 Direct from Manufacturer</div>
+  <div class="trust-div"></div>
+  <div class="trust-item">🚚 Pan-India Dispatch</div>
+  <div class="trust-div"></div>
+  <div class="trust-item">📦 Bulk &amp; Retail Orders</div>
+  <div class="trust-div"></div>
+  <div class="trust-item">⭐ 25+ Years Experience</div>
+</div>
+
+<!-- BRANDS -->
+<section id="brands">
+  <div class="section-header">
+    <div class="section-eyebrow">Our Brand Partners</div>
+    <h2 class="section-title">Products We Supply</h2>
+    <p class="section-sub">Authorised dealers sourcing directly from industry-leading manufacturers — every product is 100% genuine and brand-certified.</p>
+  </div>
+  <div class="brands-grid">
+    <div class="brand-card">
+      <div class="brand-bar f"></div>
+      <div class="brand-head"><div class="brand-icon f">🏗️</div><div><div class="brand-name">Fosroc Chemical</div><div class="brand-type">Construction Chemicals</div></div></div>
+      <div class="brand-body">
+        <p class="brand-desc">Specialised construction chemical solutions for concrete repair, waterproofing, grouts, sealants, and protective coatings used on major infrastructure projects.</p>
+        <ul class="brand-list">
+          <li><span class="dot f"></span>Concrete Repair Mortars &amp; Grouts</li>
+          <li><span class="dot f"></span>Waterproofing Systems</li>
+          <li><span class="dot f"></span>Epoxy Floor Coatings</li>
+          <li><span class="dot f"></span>Admixtures &amp; Curing Compounds</li>
+          <li><span class="dot f"></span>Structural Adhesives &amp; Anchors</li>
+        </ul>
+        <span class="brand-badge f">✓ Authorised Dealer</span>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-bar a"></div>
+      <div class="brand-head"><div class="brand-icon a">🎨</div><div><div class="brand-name">Asian Paints</div><div class="brand-type">Decorative &amp; Industrial Paints</div></div></div>
+      <div class="brand-body">
+        <p class="brand-desc">India's leading paint brand offering interior, exterior, and industrial coatings with a wide range of textures, sheens, and thousands of colour choices.</p>
+        <ul class="brand-list">
+          <li><span class="dot a"></span>Interior Emulsions &amp; Distempers</li>
+          <li><span class="dot a"></span>Exterior Weatherproof Paints</li>
+          <li><span class="dot a"></span>Primers &amp; Undercoats</li>
+          <li><span class="dot a"></span>Enamel &amp; Metal Paints</li>
+          <li><span class="dot a"></span>Texture Finishes &amp; Special Effects</li>
+        </ul>
+        <span class="brand-badge a">✓ Authorised Dealer</span>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-bar p"></div>
+      <div class="brand-head"><div class="brand-icon p">🖌️</div><div><div class="brand-name">Nuvoco Cement</div><div class="brand-type">Nuvoco & JK Lakshmi Cement</div></div></div>
+      <div class="brand-body">
+        <p class="brand-desc">Advanced range of cement and concrete products designed for superior durability and high performance across residential, commercial, and industrial construction.</p>
+        <ul class="brand-list">
+          <li><span class="dot p"></span>Premium &amp; High-Strength Cement</li>
+          <li><span class="dot p"></span>Advanced PPC Range</li>
+          <li><span class="dot p"></span>Modern Concrete Solutions</li>
+          <li><span class="dot p"></span>Surface Finishes</li>
+          <li><span class="dot p"></span>Construction Essentials</li>
+        </ul>
+        <span class="brand-badge p">✓ Authorised Dealer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">From order intake to doorstep delivery — we manage the complete supply chain so you can focus on your work.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card"><div class="svc-ico">📦</div><div class="svc-title">Order Management</div><p class="svc-desc">We receive and process bulk or retail orders efficiently. Just tell us what you need — we handle sourcing, quantities, and packaging.</p></div>
+    <div class="svc-card"><div class="svc-ico">🚚</div><div class="svc-title">Fast Dispatch</div><p class="svc-desc">Orders dispatched within 24–48 hours via trusted logistics partners, delivered directly to your site, warehouse, or store.</p></div>
+    <div class="svc-card"><div class="svc-ico">🏭</div><div class="svc-title">Direct Brand Sourcing</div><p class="svc-desc">As an authorised dealer we buy directly from Fosroc, Asian Paints &amp; PPG — genuine products at competitive prices, every time.</p></div>
+    <div class="svc-card"><div class="svc-ico">💬</div><div class="svc-title">Product Consultation</div><p class="svc-desc">Not sure which product fits your project? Our team helps you select the right construction chemical or coating for your application.</p></div>
+    <div class="svc-card"><div class="svc-ico">🧾</div><div class="svc-title">GST Invoicing</div><p class="svc-desc">All orders come with proper GST-compliant invoices, fully supporting B2B billing for contractors, builders, and hardware stores.</p></div>
+    <div class="svc-card"><div class="svc-ico">🔄</div><div class="svc-title">Bulk &amp; Repeat Orders</div><p class="svc-desc">Preferential pricing and priority dispatch for bulk buyers and regular customers. Set up a recurring supply agreement effortlessly.</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-header">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Simple 4-Step Process</h2>
+    <p class="section-sub">Getting products to you is seamless. Here's how our order-to-dispatch cycle works.</p>
+  </div>
+  <div class="process-track">
+    <div class="pstep"><div class="pstep-num">01</div><div class="pstep-title">You Place Order</div><p class="pstep-desc">Contact us via phone, WhatsApp, or the enquiry form with your product list and required quantity.</p></div>
+    <div class="pstep"><div class="pstep-num">02</div><div class="pstep-title">Confirm &amp; Quote</div><p class="pstep-desc">We confirm availability, share pricing, and send a proforma invoice for your approval.</p></div>
+    <div class="pstep"><div class="pstep-num">03</div><div class="pstep-title">We Source It</div><p class="pstep-desc">We purchase required stock directly from the brand on your behalf — guaranteed genuine.</p></div>
+    <div class="pstep"><div class="pstep-num">04</div><div class="pstep-title">Fast Dispatch</div><p class="pstep-desc">Products packed and dispatched to your address with a full GST-compliant invoice.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-card-wrap">
+      <div class="about-card-shadow"></div>
+      <div class="about-card">
+        <div class="about-big">25+</div>
+        <div class="about-big-label">Years in the Industry</div>
+        <div class="about-hr"></div>
+        <ul class="about-list">
+          <li><span class="chk">✓</span>Authorised dealer for 3 major brands</li>
+          <li><span class="chk">✓</span>Pan-India dispatch capability</li>
+          <li><span class="chk">✓</span>Dedicated account &amp; order support</li>
+          <li><span class="chk">✓</span>100% genuine, brand-certified products</li>
+          <li><span class="chk">✓</span>Fully GST-compliant operations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="section-eyebrow">About Us</span>
+      <h3>A Trader You Can Actually Rely On</h3>
+      <p>We are a dedicated trading business specialising in construction chemicals and decorative coatings, working directly with Fosroc, Asian Paints, and PPG Decorative to supply contractors, builders, hardware retailers, and project sites across India.</p>
+      <p>Our role is simple: you need the product, we source it, we send it. No middlemen, no delays. With strong supplier relationships and a streamlined dispatch process, procurement is fast and hassle-free.</p>
+      <a class="btn-blue" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-eyebrow">Contact Us</div>
+    <h2 class="section-title">Place an Order or Enquire</h2>
+    <p class="section-sub">Ready to order? Fill the form and we'll get back to you within a few hours.</p>
+  </div>
+  <div class="contact-inner">
+    <div class="contact-left">
+      <h3>Let's Do Business Together</h3>
+      <p>Whether you're a contractor, painter, builder, or hardware retailer — we supply what you need, when you need it.</p>
+      <div class="c-row"><div class="c-ico">📞</div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val"> 94255 08151 / 62628 25251</div></div></div>
+      <div class="c-row"><div class="c-ico">✉️</div><div><div class="c-label">Email</div><div class="c-val">archanasales.ryp@gmail.com</div></div></div>
+      <div class="c-row"><div class="c-ico">📍</div><div><div class="c-label">Location</div><div class="c-val">Srishti Garden, Ring Road No. 1, Shatabdi Nagar, Telibandha, Raipur, Chhattisgarh 492001</div></div></div>
+      <div class="c-row"><div class="c-ico">⏰</div><div><div class="c-label">Working Hours</div><div class="c-val">Mon – Sat &nbsp;|&nbsp; 10:00 AM – 7:00 PM</div></div></div>
+    </div>
+
+    <!-- ENQUIRY FORM -->
+    <div class="contact-form">
+      <div class="form-heading">Send Your Enquiry</div>
+
+      <div class="alert-success" id="msg-success">
+        <strong>✅ Enquiry Submitted!</strong>
+        <span>We've received your enquiry and will contact you within a few hours.</span>
+      </div>
+      <div class="alert-error" id="msg-error">
+        <strong>⚠️ Submission Failed</strong>
+        <span>Please try again or reach us directly on WhatsApp.</span>
+      </div>
+
+      <div class="frow">
+        <div class="fg"><label>Your Name *</label><input id="f-name" type="text" placeholder="Kamlesh Sahu"/></div>
+        <div class="fg"><label>Phone Number *</label><input id="f-phone" type="tel" placeholder="+91 77778 05172"/></div>
+      </div>
+      <div class="fg"><label>Email Address</label><input id="f-email" type="email" placeholder="you@example.com"/></div>
+      <div class="frow">
+        <div class="fg"><label>Brand</label>
+          <select id="f-brand">
+            <option value="">Select Brand</option>
+            <option>Fosroc Chemical</option>
+            <option>Asian Paints</option>
+            <option>Nuvoco & JK Lakshmi Cement</option>
+            <option>Multiple Brands</option>
+          </select>
+        </div>
+        <div class="fg"><label>Order Type</label>
+          <select id="f-type">
+            <option value="">Select Type</option>
+            <option>New Order</option>
+            <option>Product Enquiry</option>
+            <option>Bulk Purchase</option>
+            <option>Repeat Order</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Product Details / Message *</label>
+        <textarea id="f-message" placeholder="Tell us which products you need, quantities, and delivery location…"></textarea>
+      </div>
+      <button class="form-btn" id="submit-btn" onclick="submitEnquiry()">Send Order Enquiry →</button>
+      <p style="font-size:.74rem;color:var(--muted);margin-top:10px;text-align:center;">
+        🔒 Your data is saved securely in our private record.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-brand">
+    <div class="f-mark">AS</div>
+    <div class="f-name">Archana<span></span> Sales</div>
+  </div>
+  <div class="f-chips">
+    <span class="fchip f">Fosroc</span>
+    <span class="fchip a">Asian Paints</span>
+    <span class="fchip p">Nuvoco & JK Lakshmi Cement</span>
+  </div>
+  <div class="f-copy">© 2026 Archana Sales All rights reserved.</div>
+</footer>
+
+<script>
+  // ================================================================
+  //  STEP: After deploying your Google Apps Script, paste the
+  //  Web App URL below (replace the placeholder text).
+  // ================================================================
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbxRNV6m9ToRSz3lDz1NczDEnE8X1bgttbnyPLJs2UkLRDOc-CJwt62487nCz-Tbi_hG/exec";
+
+  async function submitEnquiry() {
+    const name    = document.getElementById("f-name").value.trim();
+    const phone   = document.getElementById("f-phone").value.trim();
+    const email   = document.getElementById("f-email").value.trim();
+    const brand   = document.getElementById("f-brand").value;
+    const type    = document.getElementById("f-type").value;
+    const message = document.getElementById("f-message").value.trim();
+
+    if (!name)    { alert("Please enter your name.");           return; }
+    if (!phone)   { alert("Please enter your phone number.");   return; }
+    if (!message) { alert("Please describe your requirement."); return; }
+
+    const btn = document.getElementById("submit-btn");
+    btn.disabled    = true;
+    btn.textContent = "Submitting…";
+
+    document.getElementById("msg-success").style.display = "none";
+    document.getElementById("msg-error").style.display   = "none";
+
+    try {
+      // Google Apps Script requires no-cors mode
+      await fetch(SHEET_URL, {
+        method:  "POST",
+        mode:    "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, email, brand, orderType: type, message })
+      });
+
+      // no-cors = opaque response; treat no-throw as success
+      document.getElementById("msg-success").style.display = "block";
+      btn.textContent      = "Enquiry Sent ✓";
+      btn.style.background = "#16a34a";
+
+      // Clear fields
+      ["f-name","f-phone","f-email","f-message"].forEach(id => {
+        document.getElementById(id).value = "";
+      });
+      document.getElementById("f-brand").value = "";
+      document.getElementById("f-type").value  = "";
+
+    } catch (err) {
+      document.getElementById("msg-error").style.display = "block";
+      btn.disabled    = false;
+      btn.textContent = "Send Order Enquiry →";
+    }
+  }
+</script>
+</body>
+</html>

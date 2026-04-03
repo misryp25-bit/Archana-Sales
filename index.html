@@ -511,6 +511,11 @@
       document.getElementById("f-brand").value = "";
       document.getElementById("f-type").value  = "";
 
+		// Wait 3 seconds, then reload the page
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000); 
+
     } catch (err) {
       document.getElementById("msg-error").style.display = "block";
       btn.disabled    = false;

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#1a3c6e"/>
+  <title>Staff Login – Archana Sales</title>
+  <meta name="description" content="Internal staff login for Archana Sales, Raipur."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/png/logo-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/png/logo-16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/png/logo-256.png"/>
+  <style>
+    :root{
+      --primary:#1a3c6e; --primary-light:#2557a7; --primary-dark:#0b1e3f;
+      --accent:#e8930a; --accent-dark:#c47a07;
+      --text:#0f172a; --muted:#5a6a80; --border:#e2e8f0;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0; min-height:100vh;
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 620px at 82% -10%, rgba(37,87,167,.55), transparent 62%),
+        linear-gradient(135deg, #08172f 0%, #0f2952 48%, #16406f 100%);
+      display:flex; align-items:center; justify-content:center;
+      padding:32px 20px;
+    }
+    .login-shell{
+      width:100%; max-width:940px;
+      display:grid; grid-template-columns:1.05fr 1fr;
+      background:#fff; border-radius:22px; overflow:hidden;
+      box-shadow:0 30px 80px rgba(3,12,28,.45);
+    }
+
+    /* ── Left: brand panel ── */
+    .login-brand{
+      background:linear-gradient(150deg,var(--primary-dark) 0%,var(--primary) 55%,var(--primary-light) 100%);
+      color:#fff; padding:44px 40px; position:relative; overflow:hidden;
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+    .login-brand::after{
+      content:''; position:absolute; width:420px; height:420px; border-radius:50%;
+      background:#fff; opacity:.06; top:-150px; right:-140px;
+    }
+    .lb-logo{display:flex; align-items:center; gap:12px; position:relative; z-index:1;}
+    .lb-logo img{height:44px; width:auto;}
+    .lb-logo .name{font-size:1.14rem; font-weight:800; line-height:1.1;}
+    .lb-logo .sub{font-size:.66rem; text-transform:uppercase; letter-spacing:1.1px; color:rgba(255,255,255,.65);}
+    .lb-body{position:relative; z-index:1; margin:36px 0;}
+    .lb-body h1{font-size:1.7rem; font-weight:800; line-height:1.2; margin:0 0 12px;}
+    .lb-body h1 span{color:#fbbf24;}
+    .lb-body p{font-size:.9rem; line-height:1.7; color:rgba(255,255,255,.78); margin:0;}
+    .lb-list{list-style:none; padding:0; margin:22px 0 0; display:grid; gap:9px; position:relative; z-index:1;}
+    .lb-list li{display:flex; align-items:flex-start; gap:9px; font-size:.83rem; color:rgba(255,255,255,.88);}
+    .lb-list i{color:#4ade80; font-size:.7rem; margin-top:4px;}
+    .lb-foot{position:relative; z-index:1; font-size:.75rem; color:rgba(255,255,255,.55);}
+    .lb-foot a{color:#fbbf24; text-decoration:none;}
+
+    /* ── Right: form ── */
+    .login-form{padding:48px 44px; display:flex; flex-direction:column; justify-content:center;}
+    .lf-head{margin-bottom:26px;}
+    .lf-head .eyebrow{
+      font-size:.68rem; font-weight:700; letter-spacing:1.6px;
+      text-transform:uppercase; color:var(--accent); display:block; margin-bottom:7px;
+    }
+    .lf-head h2{font-size:1.38rem; font-weight:800; color:var(--primary); margin:0 0 6px;}
+    .lf-head p{font-size:.85rem; color:var(--muted); margin:0; line-height:1.6;}
+
+    .field{margin-bottom:16px;}
+    .field label{display:block; font-size:.78rem; font-weight:600; color:var(--text); margin-bottom:6px;}
+    .input-wrap{position:relative;}
+    .input-wrap i{
+      position:absolute; left:14px; top:50%; transform:translateY(-50%);
+      color:#94a3b8; font-size:.82rem; pointer-events:none;
+    }
+    .field input{
+      width:100%; padding:12px 14px 12px 40px;
+      border:1.5px solid var(--border); border-radius:10px;
+      font-family:inherit; font-size:.9rem; color:var(--text);
+      background:#f8fafc; transition:border-color .2s, background .2s, box-shadow .2s;
+    }
+    .field input:focus{
+      outline:none; border-color:var(--primary-light); background:#fff;
+      box-shadow:0 0 0 3px rgba(37,87,167,.13);
+    }
+    .pw-toggle{
+      position:absolute; right:8px; top:50%; transform:translateY(-50%);
+      background:none; border:0; color:#94a3b8; cursor:pointer;
+      padding:8px; font-size:.85rem; border-radius:6px;
+    }
+    .pw-toggle:hover{color:var(--primary);}
+
+    .row-between{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; flex-wrap:wrap; margin:4px 0 22px;
+    }
+    .remember{display:flex; align-items:center; gap:7px; font-size:.8rem; color:var(--muted); cursor:pointer;}
+    .remember input{accent-color:var(--primary); width:15px; height:15px;}
+    .link-muted{font-size:.8rem; color:var(--primary); text-decoration:none; font-weight:600;}
+    .link-muted:hover{color:var(--accent);}
+
+    .btn-login{
+      width:100%; padding:13px; border:0; border-radius:10px;
+      background:var(--accent); color:#fff;
+      font-family:inherit; font-size:.93rem; font-weight:700;
+      cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:9px;
+      transition:background .2s, transform .15s, box-shadow .2s;
+    }
+    .btn-login:hover{background:var(--accent-dark); transform:translateY(-2px); box-shadow:0 8px 22px rgba(232,147,10,.34);}
+    .btn-login:active{transform:translateY(0);}
+
+    .notice{
+      display:none; margin-top:18px; padding:12px 14px; border-radius:10px;
+      background:#fffbeb; border:1px solid #fde68a; color:#92400e;
+      font-size:.82rem; line-height:1.6;
+    }
+    .notice.show{display:block;}
+    .notice i{margin-right:6px;}
+
+    .lf-foot{
+      margin-top:26px; padding-top:18px; border-top:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      font-size:.78rem; color:var(--muted);
+    }
+    .lf-foot a{color:var(--primary); text-decoration:none; font-weight:600;}
+    .lf-foot a:hover{color:var(--accent);}
+
+    @media (max-width:820px){
+      .login-shell{grid-template-columns:1fr; max-width:460px;}
+      .login-brand{padding:32px 28px;}
+      .lb-body{margin:24px 0;}
+      .lb-body h1{font-size:1.4rem;}
+      .lb-list{display:none;}
+      .login-form{padding:34px 28px 38px;}
+    }
+  </style>
+</head>
+<body>
+
+<main class="login-shell">
+
+  <!-- Brand panel -->
+  <section class="login-brand">
+    <a class="lb-logo" href="index.html" style="text-decoration:none;color:inherit;">
+      <img src="assets/Logo.png" alt="Archana Sales"/>
+      <span>
+        <span class="name" style="display:block;">Archana Sales</span>
+        <span class="sub">Official Dealer &amp; Distributor</span>
+      </span>
+    </a>
+
+    <div class="lb-body">
+      <h1>Staff Portal<br/><span>Archana Sales</span></h1>
+      <p>Internal access for the Archana Sales team &mdash; orders, stock, quotations and daily reporting, all in one place.</p>
+      <ul class="lb-list">
+        <li><i class="fas fa-check"></i> Quotations &amp; order entry</li>
+        <li><i class="fas fa-check"></i> Stock and dispatch status</li>
+        <li><i class="fas fa-check"></i> Field reporting &amp; enquiries</li>
+        <li><i class="fas fa-check"></i> Accounts and collection follow-up</li>
+      </ul>
+    </div>
+
+    <p class="lb-foot">
+      Authorised staff only &middot; <a href="index.html">Back to website</a>
+    </p>
+  </section>
+
+  <!-- Login form -->
+  <section class="login-form">
+    <div class="lf-head">
+      <span class="eyebrow">Office Use</span>
+      <h2>Sign in to your account</h2>
+      <p>Use the staff ID and password issued to you by the office.</p>
+    </div>
+
+    <form id="staffLogin" novalidate>
+      <div class="field">
+        <label for="staff-id">Staff ID or Email</label>
+        <div class="input-wrap">
+          <i class="fas fa-user" aria-hidden="true"></i>
+          <input type="text" id="staff-id" name="staffId" autocomplete="username"
+                 placeholder="e.g. AS-1042 or name@archanasales.in" required/>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="staff-pw">Password</label>
+        <div class="input-wrap">
+          <i class="fas fa-lock" aria-hidden="true"></i>
+          <input type="password" id="staff-pw" name="password" autocomplete="current-password"
+                 placeholder="Enter your password" required/>
+          <button type="button" class="pw-toggle" id="pwToggle"
+                  aria-label="Show password" title="Show password">
+            <i class="fas fa-eye" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row-between">
+        <label class="remember"><input type="checkbox" id="remember"/> Keep me signed in</label>
+        <a class="link-muted" href="https://wa.me/919425508151?text=Hello%2C%20I%20need%20help%20with%20my%20Archana%20Sales%20staff%20login."
+           target="_blank" rel="noopener">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn-login">
+        <i class="fas fa-right-to-bracket" aria-hidden="true"></i> Sign In
+      </button>
+
+      <div class="notice" id="loginNotice" role="status">
+        <i class="fas fa-circle-info" aria-hidden="true"></i>
+        <span id="loginNoticeText"></span>
+      </div>
+    </form>
+
+    <div class="lf-foot">
+      <span><i class="fas fa-shield-halved" aria-hidden="true"></i> Authorised staff only</span>
+      <a href="index.html"><i class="fas fa-arrow-left"></i> Back to website</a>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var form   = document.getElementById('staffLogin');
+  var pw     = document.getElementById('staff-pw');
+  var toggle = document.getElementById('pwToggle');
+  var notice = document.getElementById('loginNotice');
+  var text   = document.getElementById('loginNoticeText');
+
+  toggle.addEventListener('click', function () {
+    var show = pw.type === 'password';
+    pw.type = show ? 'text' : 'password';
+    toggle.querySelector('i').className = show ? 'fas fa-eye-slash' : 'fas fa-eye';
+    toggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    toggle.setAttribute('title',      show ? 'Hide password' : 'Show password');
+  });
+
+  function say(msg) { text.textContent = msg; notice.classList.add('show'); }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var id = document.getElementById('staff-id').value.trim();
+    if (!id || !pw.value) { say('Please enter both your staff ID and password.'); return; }
+
+    /* The staff portal is not connected yet. Point this at your ERP /
+       Apps Script / server endpoint when it is ready — for example:
+         window.location.href = 'https://portal.archanasales.in/?u=' + encodeURIComponent(id);
+    */
+    say('The staff portal is not connected yet. Please contact the office on 9425508151 for access.');
+  });
+})();
+</script>
+
+</body>
+</html>

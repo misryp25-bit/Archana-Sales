@@ -1,527 +1,943 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ArchanaSales – Fosroc | Asian Paints | Novoco</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
-<style>
-  :root {
-    --bg:#f5f7fc;--bg2:#eef1f8;--white:#ffffff;--navy:#0d2257;--blue:#1a56db;
-    --blue-light:#3b82f6;--blue-pale:#dbeafe;--blue-xpale:#eff6ff;
-    --text:#0f172a;--body:#374151;--muted:#6b7280;--border:#e2e8f0;
-    --shadow:0 4px 24px rgba(13,34,87,0.08);--shadow-lg:0 12px 48px rgba(13,34,87,0.13);
-    --fosroc:#dc2626;--asian:#1d4ed8;--ppg:#16a34a;
-  }
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;line-height:1.6}
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#1a3c6e"/>
+  <title>Archana Sales – Authorised Dealer &amp; Distributor | Raipur, Chhattisgarh</title>
+  <meta name="description" content="Archana Sales, Raipur — authorised dealer &amp; distributor of Fosroc construction chemicals, Asian Paints &amp; Asian Paints PPG, Nuvoco Cement, JK Laxmi Cement and Jindal Panther Cement across Chhattisgarh."/>
+  <meta name="keywords" content="Fosroc dealer Raipur, Asian Paints dealer Raipur, JK Laxmi Cement Raipur, Jindal Panther Cement, Nuvoco Cement, construction chemicals Chhattisgarh, waterproofing Raipur"/>
+  <meta name="author" content="Archana Sales"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="index.html"/>
 
-  /* NAV */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:70px;box-shadow:0 2px 12px rgba(13,34,87,0.06)}
-  .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-  .nav-logo-mark{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:800}
-  .nav-logo-text{font-weight:800;font-size:1.1rem;color:var(--navy)}
-  .nav-logo-text span{color:var(--blue)}
-  .nav-links{display:flex;gap:4px;list-style:none}
-  .nav-links a{color:var(--body);text-decoration:none;font-size:.875rem;font-weight:500;padding:7px 14px;border-radius:7px;transition:all .18s}
-  .nav-links a:hover{background:var(--blue-xpale);color:var(--blue)}
-  .nav-cta{background:var(--blue);color:#fff;padding:9px 22px;border-radius:8px;font-size:.875rem;font-weight:600;text-decoration:none;transition:all .18s;box-shadow:0 2px 8px rgba(26,86,219,.3)}
-  .nav-cta:hover{background:var(--navy);transform:translateY(-1px)}
+  <!-- Social preview -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Archana Sales – Authorised Dealer &amp; Distributor, Raipur"/>
+  <meta property="og:description" content="Genuine Fosroc, Asian Paints, Nuvoco, JK Laxmi &amp; Jindal Panther products, delivered across Chhattisgarh."/>
+  <meta property="og:image" content="assets/Logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
-  /* HERO */
-  .hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#1a3a7a 55%,#1e4fa0 100%);display:flex;align-items:center;padding:120px 64px 80px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 78% 25%,rgba(59,130,246,.22) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 85%,rgba(14,165,233,.12) 0%,transparent 55%)}
-  .hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
-  .hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center;position:relative;z-index:1}
-  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:6px 16px;border-radius:24px;font-size:.78rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#93c5fd;margin-bottom:22px}
-  .hero-badge::before{content:'●';font-size:.48rem;color:#4ade80}
-  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.4rem);font-weight:800;line-height:1.1;color:#fff;margin-bottom:22px;letter-spacing:-.5px}
-  .hero h1 span{background:linear-gradient(90deg,#93c5fd,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .hero-sub{color:#bfdbfe;font-size:1.03rem;line-height:1.75;max-width:490px;margin-bottom:38px}
-  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-  .btn-white{background:#fff;color:var(--navy);padding:13px 30px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s;box-shadow:0 2px 12px rgba(0,0,0,.15)}
-  .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
-  .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25);padding:13px 30px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s}
-  .btn-ghost:hover{background:rgba(255,255,255,.18)}
-  .hero-right{display:flex;flex-direction:column;gap:16px}
-  .hero-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .hero-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px 20px;backdrop-filter:blur(8px);transition:background .2s}
-  .hero-stat:hover{background:rgba(255,255,255,.12)}
-  .hero-stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1}
-  .hero-stat-num span{color:#38bdf8}
-  .hero-stat-label{color:#93c5fd;font-size:.8rem;margin-top:5px;font-weight:500}
-
-  /* TRUST BAR */
-  .trust-bar{background:var(--white);border-bottom:1px solid var(--border);padding:18px 64px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
-  .trust-item{display:flex;align-items:center;gap:9px;font-size:.84rem;font-weight:600;color:var(--body)}
-  .trust-div{width:1px;height:22px;background:var(--border)}
-
-  /* SECTIONS */
-  section{padding:96px 64px}
-  .section-header{text-align:center;margin-bottom:60px}
-  .section-eyebrow{display:inline-block;background:var(--blue-pale);color:var(--blue);padding:5px 14px;border-radius:20px;font-size:.76rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
-  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3vw,2.75rem);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:14px}
-  .section-sub{color:var(--muted);font-size:.97rem;max-width:530px;margin:0 auto;line-height:1.75}
-
-  /* BRANDS */
-  #brands{background:var(--bg2)}
-  .brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
-  .brand-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s}
-  .brand-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-  .brand-bar{height:5px}
-  .brand-bar.f{background:linear-gradient(90deg,#dc2626,#ef4444)}
-  .brand-bar.a{background:linear-gradient(90deg,#1d4ed8,#3b82f6)}
-  .brand-bar.p{background:linear-gradient(90deg,#16a34a,#22c55e)}
-  .brand-head{padding:26px 26px 18px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border)}
-  .brand-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-  .brand-icon.f{background:#fef2f2}.brand-icon.a{background:#eff6ff}.brand-icon.p{background:#f0fdf4}
-  .brand-name{font-weight:800;font-size:1.05rem;color:var(--navy)}
-  .brand-type{font-size:.76rem;color:var(--muted);margin-top:2px}
-  .brand-body{padding:18px 26px 26px}
-  .brand-desc{color:var(--body);font-size:.87rem;line-height:1.7;margin-bottom:16px}
-  .brand-list{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .brand-list li{display:flex;align-items:center;gap:9px;font-size:.85rem;color:var(--body)}
-  .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-  .dot.f{background:var(--fosroc)}.dot.a{background:var(--asian)}.dot.p{background:var(--ppg)}
-  .brand-badge{display:inline-block;margin-top:18px;padding:6px 14px;border-radius:6px;font-size:.74rem;font-weight:700;letter-spacing:.5px}
-  .brand-badge.f{background:#fef2f2;color:var(--fosroc)}.brand-badge.a{background:#eff6ff;color:var(--asian)}.brand-badge.p{background:#f0fdf4;color:var(--ppg)}
-
-  /* SERVICES */
-  #services{background:var(--white)}
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto}
-  .svc-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:30px 24px;transition:all .22s}
-  .svc-card:hover{background:var(--white);box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--blue-light)}
-  .svc-ico{width:50px;height:50px;border-radius:11px;background:var(--blue-xpale);border:1.5px solid var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:16px}
-  .svc-title{font-weight:700;font-size:.97rem;color:var(--navy);margin-bottom:9px}
-  .svc-desc{color:var(--muted);font-size:.86rem;line-height:1.7}
-
-  /* PROCESS */
-  #process{background:var(--navy)}
-  #process .section-eyebrow{background:rgba(147,197,253,.15);color:#93c5fd}
-  #process .section-title{color:#fff}
-  #process .section-sub{color:#93c5fd}
-  .process-track{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-  .process-track::before{content:'';position:absolute;top:35px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,rgba(59,130,246,.5),rgba(56,189,248,.5))}
-  .pstep{text-align:center;padding:0 16px}
-  .pstep-num{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.07);border:2px solid rgba(59,130,246,.45);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#93c5fd;position:relative;z-index:1;transition:all .22s}
-  .pstep:hover .pstep-num{background:var(--blue);border-color:var(--blue);color:#fff}
-  .pstep-title{font-weight:700;font-size:.92rem;color:#fff;margin-bottom:8px}
-  .pstep-desc{color:#93c5fd;font-size:.8rem;line-height:1.65}
-
-  /* ABOUTT */
-  #about{background:var(--bg2)}
-  .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-  .about-card-wrap{position:relative}
-  .about-card-shadow{position:absolute;inset:16px -16px -16px 16px;background:var(--blue-pale);border-radius:20px;z-index:0}
-  .about-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:42px;box-shadow:var(--shadow-lg);position:relative;z-index:1}
-  .about-big{font-family:'Playfair Display',serif;font-size:5rem;font-weight:800;color:var(--blue);line-height:1}
-  .about-big-label{font-size:.82rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:4px 0 26px}
-  .about-hr{height:1px;background:var(--border);margin-bottom:22px}
-  .about-list{list-style:none;display:flex;flex-direction:column;gap:11px}
-  .about-list li{display:flex;align-items:flex-start;gap:10px;font-size:.87rem;color:var(--body)}
-  .chk{width:20px;height:20px;border-radius:50%;background:var(--blue-pale);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.62rem;flex-shrink:0;margin-top:2px;font-weight:700}
-  .about-text .section-eyebrow{display:inline-block}
-  .about-text h3{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:800;color:var(--navy);line-height:1.2;margin:13px 0 18px}
-  .about-text p{color:var(--body);font-size:.92rem;line-height:1.8;margin-bottom:14px}
-  .btn-blue{display:inline-block;background:var(--blue);color:#fff;padding:13px 30px;border-radius:8px;font-weight:700;font-size:.88rem;text-decoration:none;margin-top:10px;box-shadow:0 4px 16px rgba(26,86,219,.25);transition:all .2s}
-  .btn-blue:hover{background:var(--navy);transform:translateY(-2px)}
-
-  /* CONTACT */
-  #contact{background:var(--white)}
-  .contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
-  .contact-left h3{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:800;color:var(--navy);margin-bottom:12px}
-  .contact-left>p{color:var(--muted);font-size:.92rem;line-height:1.75;margin-bottom:34px}
-  .c-row{display:flex;align-items:flex-start;gap:13px;margin-bottom:20px}
-  .c-ico{width:42px;height:42px;border-radius:10px;background:var(--blue-xpale);border:1px solid var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
-  .c-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:3px}
-  .c-val{font-size:.91rem;color:var(--text);font-weight:500}
-  .contact-form{background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:38px;box-shadow:var(--shadow)}
-  .form-heading{font-weight:800;font-size:1.05rem;color:var(--navy);margin-bottom:22px}
-  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .fg{margin-bottom:17px}
-  .fg label{display:block;font-size:.76rem;font-weight:600;color:var(--body);text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px}
-  .fg input,.fg select,.fg textarea{width:100%;background:var(--white);border:1.5px solid var(--border);color:var(--text);padding:11px 13px;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .18s,box-shadow .18s}
-  .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
-  .fg textarea{resize:vertical;min-height:95px}
-  .form-btn{width:100%;background:var(--blue);color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.93rem;cursor:pointer;box-shadow:0 4px 16px rgba(26,86,219,.28);transition:all .2s}
-  .form-btn:hover:not(:disabled){background:var(--navy);transform:translateY(-2px)}
-  .form-btn:disabled{opacity:.7;cursor:not-allowed}
-
-  /* ALERT BOXES */
-  .alert-success{display:none;background:#f0fdf4;border:1.5px solid #86efac;border-radius:10px;padding:18px 20px;margin-bottom:18px}
-  .alert-success strong{color:#15803d;display:block;margin-bottom:3px}
-  .alert-success span{color:#166534;font-size:.86rem}
-  .alert-error{display:none;background:#fef2f2;border:1.5px solid #fca5a5;border-radius:10px;padding:18px 20px;margin-bottom:18px}
-  .alert-error strong{color:#dc2626;display:block;margin-bottom:3px}
-  .alert-error span{color:#991b1b;font-size:.86rem}
-
-  /* FOOTER */
-  footer{background:var(--navy);padding:36px 64px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
-  .f-brand{display:flex;align-items:center;gap:10px}
-  .f-mark{width:32px;height:32px;background:rgba(255,255,255,.12);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem;font-weight:800}
-  .f-name{font-weight:800;font-size:1rem;color:#fff}
-  .f-name span{color:#93c5fd}
-  .f-copy{color:rgba(255,255,255,.38);font-size:.78rem}
-  .f-chips{display:flex;gap:10px;flex-wrap:wrap}
-  .fchip{padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:600;border:1px solid}
-  .fchip.f{color:#fca5a5;border-color:rgba(252,165,165,.3)}
-  .fchip.a{color:#93c5fd;border-color:rgba(147,197,253,.3)}
-  .fchip.p{color:#86efac;border-color:rgba(134,239,172,.3)}
-
-  /* ANIMATIONS */
-  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-  .fu{animation:fadeUp .65s ease both}
-  .d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.35s}.d4{animation-delay:.48s}
-
-  @media(max-width:900px){
-    nav{padding:0 20px}.nav-links{display:none}
-    section{padding:64px 20px}
-    .hero{padding:100px 20px 60px}
-    .hero-inner,.brands-grid,.services-grid,.about-inner,.contact-inner{grid-template-columns:1fr;gap:32px}
-    .process-track{grid-template-columns:1fr 1fr;gap:32px}
-    .process-track::before{display:none}
-    .trust-bar{padding:14px 20px;gap:18px}
-    .trust-div{display:none}
-    footer{flex-direction:column;align-items:flex-start;padding:28px 20px}
-    .frow{grid-template-columns:1fr}
-  }
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/png/logo-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/png/logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/png/logo-256.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/png/logo-256.png"/>
+  <link rel="mask-icon" href="assets/Logo.png" color="#1a3c6e"/>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- PAGE LOADER -->
+<div id="preloader">
+  <div class="pl-mark"><img src="assets/Logo.png" alt="Archana Sales" width="58" height="58"/></div>
+  <div class="pl-bar"><span></span></div>
+</div>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span><i class="fas fa-map-marker-alt"></i> Telibandha, Raipur (C.G.) &nbsp;|&nbsp; Mon–Sat: 10 AM – 7 PM</span>
+    <div>
+      <a href="tel:6262825251"><i class="fas fa-phone"></i>6262825251</a>
+      <a href="tel:9425508151"><i class="fas fa-mobile-alt"></i>9425508151</a>
+      <a href="mailto:archanasales.ryp@gmail.com"><i class="fas fa-envelope"></i>archanasales.ryp@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
 <nav>
-  <a class="nav-logo" href="#">
-	
-    	<img src="Logo.png" alt="AS" style="height:42px; width:auto;"/>
-	<div class="nav-logo-text"><span>Archana</span> Sales</div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#brands">Products</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#process">How It Works</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a class="nav-cta" href="#contact">Place an Order</a>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Archana Sales — home">
+        <div><img src="assets/Logo.png" alt="Archana Sales logo" style="height:42px; width:auto;"/></div>
+        <div class="logo-text">
+          <div class="brand">Archana Sales</div>
+          <div class="tagline">Official Dealer &amp; Distributor</div>
+        </div>
+      </a>
+      <button class="hamburger" type="button"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="has-sub">
+          <a href="who-we-are.html" class="sub-parent">Who We Are <i class="fas fa-chevron-down sub-caret" aria-hidden="true"></i></a>
+          <button class="sub-toggle" type="button" aria-label="Toggle Who We Are submenu" aria-expanded="false"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+          <ul class="sub-menu">
+            <li><a href="who-we-are.html">Who We Are</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+          </ul>
+        </li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="index.html#brands">Brands</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#order" class="nav-cta"><i class="fas fa-file-alt"></i> Get Quote</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-dots"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge fu">Authorised Dealer </div>
-      <h1 class="fu d1">Your Trusted<br/><span>Supply Partner</span> Since 2005<br/></h1>
-      <p class="hero-sub fu d2">We source premium products from Fosroc, Asian Paints &amp; Novoco Cement and handle bulk orders with fast, reliable dispatch to your site or store.</p>
-      <div class="hero-btns fu d3">
-        <a class="btn-white" href="#contact">Place Your Order</a>
-        <a class="btn-ghost" href="#brands">View Products</a>
+<main id="main">
+
+<!-- HERO SLIDESHOW -->
+<div class="hero-slider" id="ppg" aria-label="Featured brands" aria-roledescription="carousel">
+
+  <!-- Slide 1 — Fosroc film -->
+  <div class="slide slide-video active" data-video-slide>
+    <video class="slide-video-el"
+           id="heroVideo"
+           poster="assets/fosroc-video-poster.jpg"
+           preload="metadata"
+           muted
+           autoplay
+           playsinline
+           webkit-playsinline
+           disablepictureinpicture
+           aria-label="Fosroc construction chemicals film">
+      <source src="assets/Fosroc-web.mp4" type="video/mp4"/>
+    </video>
+    <div class="slide-overlay slide-overlay-video"></div>
+    <div class="container">
+      <div class="slide-content">
+        <span class="slide-badge"><i class="fas fa-play-circle"></i> Fosroc — Authorised Distributor</span>
+        <h1>Constructive Solutions,<br/><span>Supplied Across Chhattisgarh</span></h1>
+        <p>Watch how Fosroc construction chemicals protect and strengthen structures — and source the full range from Archana Sales, Raipur.</p>
+        <div class="slide-actions">
+          <a href="#products" class="btn btn-primary"><i class="fas fa-box"></i> Explore Products</a>
+          <a href="#order" class="btn btn-outline"><i class="fas fa-file-alt"></i> Get a Quote</a>
+        </div>
       </div>
     </div>
-    <div class="hero-right fu d4">
-      <div class="hero-stat-row">
-        <div class="hero-stat"><div class="hero-stat-num">50,000<span>+</span></div><div class="hero-stat-label">Orders Dispatched</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">3</div><div class="hero-stat-label">Brand Partnerships</div></div>
-      </div>
-      <div class="hero-stat-row">
-        <div class="hero-stat"><div class="hero-stat-num">48<span>H</span></div><div class="hero-stat-label">Avg. Dispatch Time</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">100<span>%</span></div><div class="hero-stat-label">Genuine Products</div></div>
+    <button class="video-sound-toggle" type="button" id="heroVideoSound"
+            aria-label="Unmute video" title="Unmute video" aria-pressed="false">
+      <i class="fas fa-volume-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+
+
+
+  <!-- Slide 2 — Asian Paints PPG: Industrial Paints Division -->
+  <div class="slide slide-ppg ppg-h1">
+    <div class="slide-overlay slide-overlay-ppg"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="container">
+      <div class="ppg-hero-inner">
+        <div class="ppg-hero-copy">
+          <span class="slide-badge"><i class="fas fa-shield-halved"></i> Authorised Dealer</span>
+          <span class="ppg-hero-eyebrow">Industrial Paints Division</span>
+          <h2 class="ppg-hero-title">Asset Protection<br/><span>Engineered to Last</span></h2>
+          <p class="ppg-hero-lead"><strong>Asian Paints PPG</strong> — a 50:50 joint venture of Asian Paints and PPG Industries, USA. High-performance protective, powder, floor and traffic coatings, supplied and supported by Archana Sales across Chhattisgarh.</p>
+          <p>Global technology from PPG Industries, manufactured and supported in India by Asian Paints — heavy-duty coating systems for plants, refineries, steel structures, bridges and process industries.</p>
+          <ul class="ppg-hero-points">
+            <li><i class="fas fa-check"></i> Protective &amp; heavy-duty coatings</li>
+            <li><i class="fas fa-check"></i> Powder coatings</li>
+            <li><i class="fas fa-check"></i> Floor coating systems</li>
+            <li><i class="fas fa-check"></i> Road marking &amp; traffic solutions</li>
+          </ul>
+          <div class="slide-actions">
+            <a href="#order" class="btn btn-primary ppg-enquire" data-ppg-product="Asian Paints PPG – Industrial Coatings"><i class="fas fa-file-alt"></i> Enquire Now</a>
+            <a href="tel:9425508151" class="btn btn-outline"><i class="fas fa-phone"></i> Talk to Us</a>
+          </div>
+        </div>
+        <div class="ppg-hero-visual">
+          <div class="ppg-logo-plate">
+            <img src="assets/paints.png" alt="Asian Paints PPG — protective, performance and powder coatings" loading="lazy" width="300" height="150"/>
+          </div>
+          <div class="ppg-chips">
+            <span>Apcomin</span><span>Apcoguard</span><span>Apcothane</span>
+            <span>Amercoat<sup>&reg;</sup></span><span>Sigma</span><span>Apcoshield</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">✅ GST Compliant Invoicing</div>
-  <div class="trust-div"></div>
-  <div class="trust-item">🏭 Direct from Manufacturer</div>
-  <div class="trust-div"></div>
-  <div class="trust-item">🚚 Pan-India Dispatch</div>
-  <div class="trust-div"></div>
-  <div class="trust-item">📦 Bulk &amp; Retail Orders</div>
-  <div class="trust-div"></div>
-  <div class="trust-item">⭐ 25+ Years Experience</div>
+  <!-- Slide 3 — Jindal Panther Cement -->
+  <div class="slide slide-3">
+    <img src="assets/PANTHER1.jpg" alt="Jindal Panther Cement" loading="lazy" class="slide-art contain"/>
+    <div class="slide-overlay"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="container">
+      <div class="slide-content">
+        <span class="slide-badge"><i class="fas fa-cubes"></i> Jindal Panther Cement</span>
+        <h1>Strength You Can<br/><span>Build Your Name On</span></h1>
+        <p>Blended cement from the Jindal Group — superior workability and durability for RCC, plastering and masonry. Available in 50 kg bags and in bulk.</p>
+        <div class="slide-actions">
+          <a href="https://wa.me/919425508151?text=I%20need%20Jindal%20Panther%20Cement%20-%20please%20quote." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Ask for Rates</a>
+          <a href="#order" class="btn btn-outline">Bulk Enquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4 — JK Laxmi Cement -->
+  <div class="slide slide-4">
+    <img src="assets/jk.png" alt="JK Laxmi Cement" loading="lazy" class="slide-art contain"/>
+    <div class="slide-overlay"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="container">
+      <div class="slide-content">
+        <span class="slide-badge"><i class="fas fa-industry"></i> JK Laxmi Cement</span>
+        <h1>Premium OPC &amp; PPC<br/><span>For Every Kind of Project</span></h1>
+        <p>OPC 43, OPC 53 and Portland Pozzolana Cement — fast setting, high compressive strength, and consistent quality from bag to bag.</p>
+        <div class="slide-actions">
+          <a href="https://wa.me/919425508151?text=I%20need%20JK%20Laxmi%20Cement%20-%20please%20quote." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Ask for Rates</a>
+          <a href="#order" class="btn btn-outline">Bulk Enquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5 — Nuvoco Cement -->
+  <div class="slide slide-5">
+    <img src="assets/Novoco.jpg" alt="Nuvoco Cement" loading="lazy" class="slide-art contain"/>
+    <div class="slide-overlay"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="container">
+      <div class="slide-content">
+        <span class="slide-badge"><i class="fas fa-layer-group"></i> Nuvoco Cement</span>
+        <h1>Engineered Cement<br/><span>For Modern Construction</span></h1>
+        <p>High-quality blended cement designed for consistent strength and finish — a dependable choice for residential, commercial and infrastructure work.</p>
+        <div class="slide-actions">
+          <a href="https://wa.me/919425508151?text=I%20need%20Nuvoco%20Cement%20-%20please%20quote." target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Ask for Rates</a>
+          <a href="#order" class="btn btn-outline">Bulk Enquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6 — Asian Paints PPG: Floor Coatings -->
+  <div class="slide slide-ppg ppg-h4">
+    <div class="slide-overlay slide-overlay-ppg"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="container">
+      <div class="ppg-hero-inner">
+        <div class="ppg-hero-copy">
+          <span class="slide-badge"><i class="fas fa-layer-group"></i> Asian Paints PPG · Floor Coatings</span>
+          <h2 class="ppg-hero-title">Industrial Flooring<br/><span>Built for Heavy Traffic</span></h2>
+          <p>Seamless epoxy and polyurethane floor systems that resist abrasion, chemicals and forklift traffic — for warehouses, workshops, food plants and pharma facilities.</p>
+          <ul class="ppg-hero-points">
+            <li><i class="fas fa-check"></i> Self-levelling epoxy screeds</li>
+            <li><i class="fas fa-check"></i> Anti-skid &amp; anti-static systems</li>
+            <li><i class="fas fa-check"></i> Chemical-resistant linings</li>
+            <li><i class="fas fa-check"></i> Line marking &amp; safety demarcation</li>
+          </ul>
+          <div class="slide-actions">
+            <a href="#order" class="btn btn-primary ppg-enquire" data-ppg-product="Asian Paints PPG – Floor Coatings"><i class="fas fa-file-alt"></i> Get a Quote</a>
+            <a href="tel:9425508151" class="btn btn-outline"><i class="fas fa-phone"></i> Talk to Us</a>
+          </div>
+        </div>
+        <div class="ppg-hero-visual">
+          <div class="ppg-icon-tile"><i class="fas fa-warehouse"></i></div>
+          <div class="ppg-chips">
+            <span>Epoxy Self-Levelling</span><span>PU Screed</span><span>Anti-Static</span><span>Anti-Skid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7 — Asian Paints PPG: Traffic Solutions -->
+  <div class="slide slide-ppg ppg-h5">
+    <div class="slide-overlay slide-overlay-ppg"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="container">
+      <div class="ppg-hero-inner">
+        <div class="ppg-hero-copy">
+          <span class="slide-badge"><i class="fas fa-road"></i> Asian Paints PPG · Traffic Solutions</span>
+          <h2 class="ppg-hero-title">Road Marking<br/><span>Superior Visibility, Longer Life</span></h2>
+          <p>Thermoplastic, water-borne acrylic and conventional road marking paints plus kerb marking systems — engineered for retro-reflectivity and durability on Indian highways.</p>
+          <ul class="ppg-hero-points">
+            <li><i class="fas fa-check"></i> Thermoplastic road marking compound</li>
+            <li><i class="fas fa-check"></i> Water-borne acrylic marking paint</li>
+            <li><i class="fas fa-check"></i> Kerb &amp; hazard marking paints</li>
+            <li><i class="fas fa-check"></i> Glass-bead retro-reflective systems</li>
+          </ul>
+          <div class="slide-actions">
+            <a href="#order" class="btn btn-primary ppg-enquire" data-ppg-product="Asian Paints PPG – Traffic / Road Marking"><i class="fas fa-file-alt"></i> Get a Quote</a>
+            <a href="tel:9425508151" class="btn btn-outline"><i class="fas fa-phone"></i> Talk to Us</a>
+          </div>
+        </div>
+        <div class="ppg-hero-visual">
+          <div class="ppg-icon-tile"><i class="fas fa-road-barrier"></i></div>
+          <div class="ppg-chips">
+            <span>Thermoplastic</span><span>Water-Borne Acrylic</span><span>Kerb Marking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8 — Company overview -->
+  <div class="slide slide-1">
+    <img src="assets/slide1.jpg" alt="Epoxy flooring project supplied by Archana Sales, Raipur" class="slide-art"/>
+    <div class="slide-overlay"></div>
+    <div class="slide-shape slide-shape-1"></div>
+    <div class="slide-shape slide-shape-2"></div>
+    <div class="container">
+      <div class="slide-content">
+        <span class="slide-badge"><i class="fas fa-certificate"></i> Authorised Dealer &amp; Distributor</span>
+        <h1>Genuine Building Materials,<br/><span>Delivered Across Chhattisgarh</span></h1>
+        <p>One trusted source for construction chemicals, paints and cement — Fosroc, Asian Paints, Nuvoco, JK Laxmi and Jindal Panther, all directly sourced from the manufacturer.</p>
+        <div class="slide-actions">
+          <a href="#products" class="btn btn-primary"><i class="fas fa-box"></i> Explore Products</a>
+          <a href="#order" class="btn btn-outline"><i class="fas fa-file-alt"></i> Get a Quote</a>
+        </div>
+        <div class="slide-meta">
+          <div><i class="fas fa-shield-halved"></i> 100% Genuine Stock</div>
+          <div><i class="fas fa-truck-fast"></i> Statewide Delivery</div>
+          <div><i class="fas fa-star"></i> 15+ Years in Raipur</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="slider-arrow slider-prev" type="button" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+  <button class="slider-arrow slider-next" type="button" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+  <div class="slider-controls">
+    <button class="slider-dot active" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+    <button class="slider-dot" type="button"></button>
+  </div>
+  <div class="slider-progress"></div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number" data-target="5" data-suffix="+">5+</div>
+        <div class="stat-label">Premium Brands</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+        <div class="stat-label">Years of Trust</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="500" data-suffix="+">500+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="20" data-suffix="+">20+</div>
+        <div class="stat-label">Districts Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+        <div class="stat-label">Genuine Products</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- BRANDS -->
 <section id="brands">
-  <div class="section-header">
-    <div class="section-eyebrow">Our Brand Partners</div>
-    <h2 class="section-title">Products We Supply</h2>
-    <p class="section-sub">Authorised dealers sourcing directly from industry-leading manufacturers — every product is 100% genuine and brand-certified.</p>
-  </div>
-  <div class="brands-grid">
-    <div class="brand-card">
-      <div class="brand-bar f"></div>
-      <div class="brand-head"><div class="brand-icon f">🏗️</div><div><div class="brand-name">Fosroc Chemical</div><div class="brand-type">Construction Chemicals</div></div></div>
-      <div class="brand-body">
-        <p class="brand-desc">Specialised construction chemical solutions for concrete repair, waterproofing, grouts, sealants, and protective coatings used on major infrastructure projects.</p>
-        <ul class="brand-list">
-          <li><span class="dot f"></span>Concrete Repair Mortars &amp; Grouts</li>
-          <li><span class="dot f"></span>Waterproofing Systems</li>
-          <li><span class="dot f"></span>Epoxy Floor Coatings</li>
-          <li><span class="dot f"></span>Admixtures &amp; Curing Compounds</li>
-          <li><span class="dot f"></span>Structural Adhesives &amp; Anchors</li>
-        </ul>
-        <span class="brand-badge f">✓ Authorised Dealer</span>
-      </div>
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">Our Principal Brands</span>
+      <h2 class="section-title">Authorised Dealer For</h2>
+      <p class="section-subtitle">We are the official dealer and distributor for India's most trusted construction and building material brands in Chhattisgarh.</p>
     </div>
-    <div class="brand-card">
-      <div class="brand-bar a"></div>
-      <div class="brand-head"><div class="brand-icon a">🎨</div><div><div class="brand-name">Asian Paints</div><div class="brand-type">Decorative &amp; Industrial Paints</div></div></div>
-      <div class="brand-body">
-        <p class="brand-desc">India's leading paint brand offering interior, exterior, and industrial coatings with a wide range of textures, sheens, and thousands of colour choices.</p>
-        <ul class="brand-list">
-          <li><span class="dot a"></span>Interior Emulsions &amp; Distempers</li>
-          <li><span class="dot a"></span>Exterior Weatherproof Paints</li>
-          <li><span class="dot a"></span>Primers &amp; Undercoats</li>
-          <li><span class="dot a"></span>Enamel &amp; Metal Paints</li>
-          <li><span class="dot a"></span>Texture Finishes &amp; Special Effects</li>
-        </ul>
-        <span class="brand-badge a">✓ Authorised Dealer</span>
+    <div class="brands-grid">
+      <div class="brand-card">
+        <div class="brand-icon"><img class="paints" src="assets/FOSROC.PNG" alt="Fosroc" width="90" height="70" loading="lazy"/></div>
+        <h3>Fosroc Chemicals</h3>
+        <p>World leader in construction chemicals — waterproofing, admixtures, repair mortars &amp; grouts.</p>
+        <span class="brand-badge">✓ Authorised Dealer</span>
       </div>
-    </div>
-    <div class="brand-card">
-      <div class="brand-bar p"></div>
-      <div class="brand-head"><div class="brand-icon p">🚚</div><div><div class="brand-name">Nuvoco Cement</div><div class="brand-type">Nuvoco & JK Lakshmi Cement</div></div></div>
-      <div class="brand-body">
-        <p class="brand-desc">Advanced range of cement and concrete products designed for superior durability and high performance across residential, commercial, and industrial construction.</p>
-        <ul class="brand-list">
-          <li><span class="dot p"></span>Premium &amp; High-Strength Cement</li>
-          <li><span class="dot p"></span>Advanced PPC Range</li>
-          <li><span class="dot p"></span>Modern Concrete Solutions</li>
-          <li><span class="dot p"></span>Surface Finishes</li>
-          <li><span class="dot p"></span>Construction Essentials</li>
-        </ul>
-        <span class="brand-badge p">✓ Authorised Dealer</span>
+      <div class="brand-card">
+        <div class="brand-icon"><img class="paints" src="assets/paints.png" alt="Asian Paints PPG" width="180" height="70" loading="lazy"/></div>
+        <h3>Asian Paints PPG</h3>
+        <p>India's No.1 paint brand — interior, exterior, premium finishes &amp; decorative solutions.</p>
+        <span class="brand-badge">✓ Authorised Dealer</span>
+      </div>
+      <div class="brand-card">
+        <div class="brand-icon"><img class="paints" src="assets/novoco.png" alt="Nuvoco Cement" width="120" height="70" loading="lazy"/></div>
+        <h3>Nuvoco Cement</h3>
+        <p>High-quality blended cement engineered for the demands of modern construction.</p>
+        <span class="brand-badge">✓ Authorised Dealer</span>
+      </div>
+      <div class="brand-card">
+        <div class="brand-icon"><img class="paints" src="assets/jk-logo.png" alt="JK Laxmi Cement" width="160" height="40" loading="lazy"/></div>
+        <h3>JK Laxmi Cement</h3>
+        <p>Premium OPC &amp; PPC cement — trusted for strength, durability and superior finish.</p>
+        <span class="brand-badge">✓ Authorised Dealer</span>
+      </div>
+      <div class="brand-card">
+        <div class="brand-icon"><img class="paints" src="assets/panther.png" alt="Jindal Panther Cement" width="200" height="60" loading="lazy"/></div>
+        <h3>Jindal Panther Cement</h3>
+        <p>Blended cement from the Jindal Group, engineered for modern construction.</p>
+        <span class="brand-badge">✓ Authorised Dealer</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-header">
-    <div class="section-eyebrow">What We Do</div>
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-sub">From order intake to doorstep delivery — we manage the complete supply chain so you can focus on your work.</p>
-  </div>
-  <div class="services-grid">
-    <div class="svc-card"><div class="svc-ico">📦</div><div class="svc-title">Order Management</div><p class="svc-desc">We receive and process bulk or retail orders efficiently. Just tell us what you need — we handle sourcing, quantities, and packaging.</p></div>
-    <div class="svc-card"><div class="svc-ico">🚚</div><div class="svc-title">Fast Dispatch</div><p class="svc-desc">Orders dispatched within 24–48 hours via trusted logistics partners, delivered directly to your site, warehouse, or store.</p></div>
-    <div class="svc-card"><div class="svc-ico">🏭</div><div class="svc-title">Direct Brand Sourcing</div><p class="svc-desc">As an authorised dealer we buy directly from Fosroc, Asian Paints &amp; PPG — genuine products at competitive prices, every time.</p></div>
-    <div class="svc-card"><div class="svc-ico">💬</div><div class="svc-title">Product Consultation</div><p class="svc-desc">Not sure which product fits your project? Our team helps you select the right construction chemical or coating for your application.</p></div>
-    <div class="svc-card"><div class="svc-ico">🧾</div><div class="svc-title">GST Invoicing</div><p class="svc-desc">All orders come with proper GST-compliant invoices, fully supporting B2B billing for contractors, builders, and hardware stores.</p></div>
-    <div class="svc-card"><div class="svc-ico">🔄</div><div class="svc-title">Bulk &amp; Repeat Orders</div><p class="svc-desc">Preferential pricing and priority dispatch for bulk buyers and regular customers. Set up a recurring supply agreement effortlessly.</p></div>
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">What We Supply</span>
+      <h2 class="section-title">Our Product Range</h2>
+      <p class="section-subtitle">Browse our range of construction materials. Contact us for pricing, availability and bulk orders.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-header">
+          <div class="product-icon"><img src="assets/FOSROC.PNG" alt="Fosroc" style="height:42px; width:auto;" loading="lazy"/></div>
+          <div><h3>Fosroc Chemicals &amp; Admixtures</h3><span class="brand-tag">Construction Chemicals</span></div>
+        </div>
+        <div class="product-body">
+          <p>Specialised solutions for concrete repair, waterproofing, grouting, sealing and protective coating — the products used on major infrastructure projects.</p>
+          <ul class="product-features">
+            <li>Cementitious &amp; membrane waterproofing</li>
+            <li>Concrete admixtures &amp; curing compounds</li>
+            <li>Epoxy grouts &amp; anchoring systems</li>
+            <li>Repair mortars &amp; anti-corrosion products</li>
+            <li>Structural adhesives &amp; epoxy floor coatings</li>
+          </ul>
+          <div class="product-order-btns">
+            <a href="https://wa.me/919425508151?text=I%20need%20Fosroc%20Chemicals%20-%20please%20quote." target="_blank" rel="noopener" class="btn-sm btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:9425508151" class="btn-sm btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="#order" class="btn-sm btn-enquiry"><i class="fas fa-file-alt"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-header">
+          <div class="product-icon"><img src="assets/paints.png" alt="Asian Paints PPG" style="height:42px; width:auto;" loading="lazy"/></div>
+          <div><h3>Asian Paints PPG</h3><span class="brand-tag">Industrial &amp; Protective Coatings</span></div>
+        </div>
+        <div class="product-body">
+          <p>High-performance industrial and protective coatings built for long service life on steel, concrete and exposed structures.</p>
+          <ul class="product-features">
+            <li>Protective industrial coatings</li>
+            <li>Anti-corrosion &amp; weatherproof systems</li>
+            <li>Floor &amp; roof coatings</li>
+            <li>Specialty coatings for steel structures</li>
+            <li>Primers &amp; high-build undercoats</li>
+          </ul>
+          <div class="product-order-btns">
+            <a href="https://wa.me/919425508151?text=I%20need%20Asian%20Paints%20PPG%20coatings%20-%20please%20quote." target="_blank" rel="noopener" class="btn-sm btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:9425508151" class="btn-sm btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="#order" class="btn-sm btn-enquiry"><i class="fas fa-file-alt"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-header">
+          <div class="product-icon"><img src="assets/ap.PNG" alt="Asian Paints" style="height:42px; width:auto;" loading="lazy"/></div>
+          <div><h3>Asian Paints</h3><span class="brand-tag">Decorative — Interior &amp; Exterior</span></div>
+        </div>
+        <div class="product-body">
+          <p>India's leading paint brand — interior and exterior finishes in a wide range of textures and sheens, with thousands of colour choices.</p>
+          <ul class="product-features">
+            <li>Royale Shyne &amp; Royale Aspira (luxury)</li>
+            <li>Apex Ultima &amp; Ace exterior emulsions</li>
+            <li>Tractor Emulsion &amp; distempers</li>
+            <li>Wood finishes, enamels &amp; primers</li>
+            <li>Texture finishes &amp; special effects</li>
+          </ul>
+          <div class="product-order-btns">
+            <a href="https://wa.me/919425508151?text=I%20need%20Asian%20Paints%20-%20please%20quote." target="_blank" rel="noopener" class="btn-sm btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:9425508151" class="btn-sm btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="#order" class="btn-sm btn-enquiry"><i class="fas fa-file-alt"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-header">
+          <div class="product-icon"><img src="assets/jk-logo.png" alt="JK Laxmi Cement" style="height:36px; width:auto;" loading="lazy"/></div>
+          <div><h3>JK Laxmi Cement</h3><span class="brand-tag">OPC &amp; PPC Cement</span></div>
+        </div>
+        <div class="product-body">
+          <p>Premium quality cement for residential, commercial and infrastructure projects — consistent strength, batch after batch.</p>
+          <ul class="product-features">
+            <li>OPC 43 Grade &amp; OPC 53 Grade</li>
+            <li>PPC (Portland Pozzolana Cement)</li>
+            <li>Available in 50 kg bags &amp; bulk</li>
+            <li>Fast setting, high compressive strength</li>
+          </ul>
+          <div class="product-order-btns">
+            <a href="https://wa.me/919425508151?text=I%20need%20JK%20Laxmi%20Cement%20-%20please%20quote." target="_blank" rel="noopener" class="btn-sm btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:9425508151" class="btn-sm btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="#order" class="btn-sm btn-enquiry"><i class="fas fa-file-alt"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-header">
+          <div class="product-icon"><img src="assets/panther.png" alt="Jindal Panther Cement" style="height:40px; width:auto;" loading="lazy"/></div>
+          <div><h3>Jindal Panther Cement</h3><span class="brand-tag">Blended Cement</span></div>
+        </div>
+        <div class="product-body">
+          <p>Blended cement from the trusted Jindal Group — well suited to all types of modern construction.</p>
+          <ul class="product-features">
+            <li>PPC / blended cement variants</li>
+            <li>Superior workability &amp; durability</li>
+            <li>Ideal for RCC, plastering &amp; masonry</li>
+            <li>Available in 50 kg bags &amp; bulk</li>
+          </ul>
+          <div class="product-order-btns">
+            <a href="https://wa.me/919425508151?text=I%20need%20Jindal%20Panther%20Cement%20-%20please%20quote." target="_blank" rel="noopener" class="btn-sm btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:9425508151" class="btn-sm btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="#order" class="btn-sm btn-enquiry"><i class="fas fa-file-alt"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-header">
+          <div class="product-icon"><img src="assets/novoco.png" alt="Nuvoco Cement" style="height:40px; width:auto;" loading="lazy"/></div>
+          <div><h3>Nuvoco Cement</h3><span class="brand-tag">Blended Cement</span></div>
+        </div>
+        <div class="product-body">
+          <p>High-quality blended cement engineered for consistent strength and a clean finish across residential and commercial work.</p>
+          <ul class="product-features">
+            <li>PPC &amp; composite cement variants</li>
+            <li>Consistent strength &amp; setting time</li>
+            <li>Smooth finish for plaster &amp; masonry</li>
+            <li>Available in 50 kg bags &amp; bulk</li>
+          </ul>
+          <div class="product-order-btns">
+            <a href="https://wa.me/919425508151?text=I%20need%20Nuvoco%20Cement%20-%20please%20quote." target="_blank" rel="noopener" class="btn-sm btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="tel:9425508151" class="btn-sm btn-call"><i class="fas fa-phone"></i> Call</a>
+            <a href="#order" class="btn-sm btn-enquiry"><i class="fas fa-file-alt"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="section-header">
-    <div class="section-eyebrow">How It Works</div>
-    <h2 class="section-title">Simple 4-Step Process</h2>
-    <p class="section-sub">Getting products to you is seamless. Here's how our order-to-dispatch cycle works.</p>
-  </div>
-  <div class="process-track">
-    <div class="pstep"><div class="pstep-num">01</div><div class="pstep-title">You Place Order</div><p class="pstep-desc">Contact us via phone, WhatsApp, or the enquiry form with your product list and required quantity.</p></div>
-    <div class="pstep"><div class="pstep-num">02</div><div class="pstep-title">Confirm &amp; Quote</div><p class="pstep-desc">We confirm availability, share pricing, and send a proforma invoice for your approval.</p></div>
-    <div class="pstep"><div class="pstep-num">03</div><div class="pstep-title">We Source It</div><p class="pstep-desc">We purchase required stock directly from the brand on your behalf — guaranteed genuine.</p></div>
-    <div class="pstep"><div class="pstep-num">04</div><div class="pstep-title">Fast Dispatch</div><p class="pstep-desc">Products packed and dispatched to your address with a full GST-compliant invoice.</p></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-inner">
-    <div class="about-card-wrap">
-      <div class="about-card-shadow"></div>
-      <div class="about-card">
-        <div class="about-big">25+</div>
-        <div class="about-big-label">Years in the Industry</div>
-        <div class="about-hr"></div>
-        <ul class="about-list">
-          <li><span class="chk">✓</span>Authorised dealer for 3 major brands</li>
-          <li><span class="chk">✓</span>Pan-India dispatch capability</li>
-          <li><span class="chk">✓</span>Dedicated account &amp; order support</li>
-          <li><span class="chk">✓</span>100% genuine, brand-certified products</li>
-          <li><span class="chk">✓</span>Fully GST-compliant operations</li>
-        </ul>
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">The Archana Sales Advantage</h2>
+      <p class="section-subtitle">We combine official brand authorisation with local expertise and customer-first service.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-certificate"></i></div>
+        <h3>100% Genuine Products</h3>
+        <p>Authorised dealer — every product is directly sourced from the manufacturer. No counterfeits, guaranteed.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-truck"></i></div>
+        <h3>Fast Delivery</h3>
+        <p>Based in Raipur, we deliver across Chhattisgarh quickly so your project never has to stop for materials.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-boxes"></i></div>
+        <h3>Bulk &amp; Trade Orders</h3>
+        <p>Competitive pricing for contractors, builders and dealers. Contact us for special bulk rates.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-headset"></i></div>
+        <h3>Expert Guidance</h3>
+        <p>Our experienced team helps you pick the right product for every application — from waterproofing to finishing.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-star"></i></div>
+        <h3>15+ Years of Trust</h3>
+        <p>Hundreds of satisfied customers — contractors, builders, homeowners — trust Archana Sales in Raipur.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-tags"></i></div>
+        <h3>Best Market Price</h3>
+        <p>Strong brand partnerships allow us to offer best-in-market pricing with full authenticity assurance.</p>
       </div>
     </div>
-    <div class="about-text">
-      <span class="section-eyebrow">About Us</span>
-      <h3>A Trader You Can Rely On</h3>
-     <div style="display: flex; align-items: center; gap: 15px;">
- 	 <!-- Profile Photo -->
-  	<img src="profile.jpg" alt="Profile Photo" 
-       style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
-  
- 	 <!-- Text Info -->
- 	 <div>
-   	 <h2 style="margin: 0; font-size: 1.2rem;">Mr. Manoj Mittal</h2>
-  	  <p style="margin: 0; color: gray;">Chairperson / Managing Director</p>
-  	</div>
-	</div>
-	<h3> </h3>
-	<div style="display: flex; align-items: center; gap: 15px;">
- 	 <!-- Profile Photo -->
-  	<img src="profile.jpg" alt="Profile Photo" 
-       style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
-  
- 	 <!-- Text Info -->
- 	 <div>
-   	 <h2 style="margin: 0; font-size: 1.2rem;">Mr. Tanmay Mittal</h2>
-  	  <p style="margin: 0; color: gray;">Director</p>
-  	</div>
-	</div> <a class="btn-blue" href="#contact">Get in Touch</a>
+  </div>
+</section>
+
+<!-- OUR CLIENTS -->
+<section id="clients">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">Our Clients</span>
+      <h2 class="section-title">Trusted by Leading Builders &amp; Contractors</h2>
+      <p class="section-subtitle">We supply builders, contractors, architects and government projects across Chhattisgarh.</p>
+    </div>
+
+    <!-- Ticker -->
+    <div class="clients-ticker-wrap">
+      <div class="clients-ticker">
+        <div class="client-chip"><i class="fas fa-building"></i> MOSH VARAYA INFRAPROJECTS PVT. LTD.</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Dee Vee Projects Limited</div>
+        <div class="client-chip"><i class="fas fa-building"></i> Digineous Technologies Private Limited</div>
+        <div class="client-chip"><i class="fas fa-drafting-compass"></i> A K Sinha Private Limited</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Rohan Builders (India) Private Limited</div>
+        <div class="client-chip"><i class="fas fa-industry"></i> Adras Real Infrastructure Pvt. Ltd.</div>
+        <div class="client-chip"><i class="fas fa-building"></i> Rudra Infracon Private Limited</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Shri Bajrang Chemical Distillery LLP</div>
+        <div class="client-chip"><i class="fas fa-school"></i> Sharda Engg. Works</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Shri Bajrang Power and Ispat Limited</div>
+        <div class="client-chip"><i class="fas fa-building"></i> Balaji Realtors</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Gupta &amp; Sons Contractors</div>
+        <!-- Duplicate set for a seamless loop -->
+        <div class="client-chip"><i class="fas fa-building"></i> MOSH VARAYA INFRAPROJECTS PVT. LTD.</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Dee Vee Projects Limited</div>
+        <div class="client-chip"><i class="fas fa-building"></i> Digineous Technologies Private Limited</div>
+        <div class="client-chip"><i class="fas fa-drafting-compass"></i> A K Sinha Private Limited</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Rohan Builders (India) Private Limited</div>
+        <div class="client-chip"><i class="fas fa-industry"></i> Adras Real Infrastructure Pvt. Ltd.</div>
+        <div class="client-chip"><i class="fas fa-building"></i> Rudra Infracon Private Limited</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Shri Bajrang Chemical Distillery LLP</div>
+        <div class="client-chip"><i class="fas fa-school"></i> Sharda Engg. Works</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Shri Bajrang Power and Ispat Limited</div>
+        <div class="client-chip"><i class="fas fa-building"></i> Balaji Realtors</div>
+        <div class="client-chip"><i class="fas fa-hard-hat"></i> Gupta &amp; Sons Contractors</div>
+      </div>
+    </div>
+
+    <!-- Client logos -->
+    <div class="clients-grid">
+      <div class="client-card"><img src="assets/mvil-logo-new2.png" alt="MVIL" width="200" height="50" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/dvpl.png" alt="Dee Vee Projects Limited" width="200" height="50" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/jswnco.svg" alt="Jayaswal Neco Industries Limited" width="200" height="50" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/JSW_Steel_Logo.svg" alt="JSW Steel" width="200" height="50" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/Rohan-Builders-Logo@2x.png" alt="Rohan Builders" width="200" height="30" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/adani-logo.svg" alt="Adani" width="200" height="30" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/fixedlogo.png" alt="Shri Bajrang Power and Ispat Limited" width="220" height="50" loading="lazy"/></div>
+      <div class="client-card"><img src="assets/sadashivinfra.png" alt="Sadashiv Infra" width="200" height="50" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">What Clients Say</span>
+      <h2 class="section-title">Customer Reviews</h2>
+      <p class="section-subtitle">Hear from our valued customers across Chhattisgarh.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Archana Sales has been our go-to supplier for Fosroc waterproofing and Asian Paints for the last 5 years. Genuine products, competitive pricing, and on-time delivery every single time."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#e8930a">RA</div>
+          <div><div class="testi-name">Rajesh Agrawal</div><div class="testi-role">R.K. Construction Co., Raipur</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"We use JK Laxmi Cement for all our housing projects. Archana Sales always delivers on time and the quality is consistently excellent. Highly recommended for bulk cement orders."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#16a34a">SS</div>
+          <div><div class="testi-name">Shyam Sundar</div><div class="testi-role">S.K. Builders, Raipur</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Their team helped us select the right Fosroc products for our bridge repair project. Technical knowledge is excellent and after-sales support is very reliable. Trust them completely."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#7c3aed">KP</div>
+          <div><div class="testi-name">Khilesh Patel</div><div class="testi-role">Site Engineer, Trimurti Constructions</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER / ENQUIRY -->
+<section id="order">
+  <div class="container">
+    <div class="order-wrapper">
+      <div class="order-info">
+        <span class="section-label">Place Your Order</span>
+        <h2>Get a Quote or<br/>Place an Order</h2>
+        <p>Reach us directly via WhatsApp, call or email &mdash; or simply fill in the enquiry form below and we&rsquo;ll get back to you promptly with pricing and availability.</p>
+        <div class="contact-methods">
+          <a href="https://wa.me/919425508151?text=Hello%20Archana%20Sales%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="contact-method">
+            <div class="cm-icon cm-wa"><i class="fab fa-whatsapp"></i></div>
+            <div><div class="cm-label">WhatsApp Order</div><div class="cm-value">+91 94255 08151</div></div>
+          </a>
+          <a href="tel:9425508151" class="contact-method">
+            <div class="cm-icon cm-call"><i class="fas fa-phone"></i></div>
+            <div><div class="cm-label">Call Us</div><div class="cm-value">9425508151 / 6262825251</div></div>
+          </a>
+          <a href="mailto:archanasales.ryp@gmail.com?subject=Product%20Enquiry%20from%20Website" class="contact-method">
+            <div class="cm-icon cm-email"><i class="fas fa-envelope"></i></div>
+            <div><div class="cm-label">Email Order</div><div class="cm-value">archanasales.ryp@gmail.com</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="enquiry-form">
+        <h3><i class="fas fa-file-alt" style="color:var(--primary);margin-right:8px"></i>Send an Enquiry</h3>
+        <form id="enquiryForm" onsubmit="submitEnquiry(event)" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enq-name">Your Name *</label>
+              <input id="enq-name" name="name" type="text" placeholder="Full name" autocomplete="name" required/>
+            </div>
+            <div class="form-group">
+              <label for="enq-phone">Phone Number *</label>
+              <input id="enq-phone" name="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enq-email">Email Address</label>
+            <input id="enq-email" name="email" type="email" placeholder="your@email.com" autocomplete="email"/>
+          </div>
+          <div class="form-group">
+            <label for="enq-product">Product / Brand Interested In *</label>
+            <select id="enq-product" name="product" required>
+              <option value="">-- Select a product --</option>
+              <option>Fosroc – Waterproofing Systems</option>
+              <option>Fosroc – Concrete Admixtures</option>
+              <option>Fosroc – Repair Mortars</option>
+              <option>Fosroc – Tile Adhesives &amp; Grouts</option>
+              <option>Asian Paints – Interior Paints</option>
+              <option>Asian Paints – Exterior Paints</option>
+              <option>Asian Paints – Wood &amp; Metal Finishes</option>
+              <option>Asian Paints PPG – Industrial Coatings</option>
+              <option>Asian Paints PPG – Protective Coatings</option>
+              <option>Asian Paints PPG – Powder Coatings</option>
+              <option>Asian Paints PPG – Floor Coatings</option>
+              <option>Asian Paints PPG – Traffic / Road Marking</option>
+              <option>JK Laxmi Cement – OPC 43 / 53 Grade</option>
+              <option>JK Laxmi Cement – PPC</option>
+              <option>Jindal Panther Cement</option>
+              <option>Nuvoco Cement</option>
+              <option>Multiple Products</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enq-qty">Quantity Required</label>
+              <input id="enq-qty" name="quantity" type="text" placeholder="e.g. 50 bags, 100 litres"/>
+            </div>
+            <div class="form-group">
+              <label for="enq-city">City / Location</label>
+              <input id="enq-city" name="city" type="text" placeholder="Your city"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enq-message">Additional Requirements</label>
+            <textarea id="enq-message" name="message" placeholder="Describe your project or any special requirements…"></textarea>
+          </div>
+          <button type="submit" id="enq-submit-btn" class="form-submit">
+            <i class="fas fa-paper-plane"></i> Send Enquiry
+          </button>
+          <p class="form-note">Your enquiry is recorded straight to our order desk. We usually reply the same working day.</p>
+        </form>
+        <div id="form-success"><i class="fas fa-circle-check" aria-hidden="true"></i> <span>Thank you! Your enquiry has been received &mdash; our team will contact you shortly.</span></div>
+        <div id="form-error"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> <span>We couldn&rsquo;t submit your enquiry just now. Please check your connection and try again, or call us on <a href="tel:9425508151">9425508151</a>.</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-header">
-    <div class="section-eyebrow">Contact Us</div>
-    <h2 class="section-title">Place an Order or Enquire</h2>
-    <p class="section-sub">Ready to order? Fill the form and we'll get back to you within a few hours.</p>
-  </div>
-  <div class="contact-inner">
-    <div class="contact-left">
-      <h3>Let's Do Business Together</h3>
-      <p>Whether you're a contractor, painter, builder, or hardware retailer — we supply what you need, when you need it.</p>
-      <div class="c-row"><div class="c-ico">📞</div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val"> 94255 08151 / 62628 25251</div></div></div>
-      <div class="c-row"><div class="c-ico">✉️</div><div><div class="c-label">Email</div><div class="c-val">archanasales.ryp@gmail.com</div></div></div>
-      <div class="c-row"><div class="c-ico">📍</div><div><div class="c-label">Location</div><div class="c-val">Srishti Garden, Ring Road No. 1, Shatabdi Nagar, Telibandha, Raipur, Chhattisgarh 492001</div></div></div>
-     <div class="c-row"><div class="c-ico">⏰</div><div><div class="c-label">Working Hours</div><div class="c-val">Mon – Sat &nbsp;|&nbsp; 10:00 AM – 7:00 PM</div></div></div>
-    <div class="c-row"><div class="c-ico">🌍</div><div><div class="c-label">Locate Us</div><div class="c-val"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8575329493424!2d81.66853329999999!3d21.237497299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd1624b32e47%3A0xd7be4066eed20582!2sArchana%20Sales!5e0!3m2!1sen!2sin!4v1775039242925!5m2!1sen!2sin" width="300" height="170" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-	</div></div></div>
-
-    <!-- ENQUIRY FORM -->
-    <div class="contact-form">
-      <div class="form-heading">Send Your Enquiry</div>
-
-      <div class="alert-success" id="msg-success">
-        <strong>✅ Enquiry Submitted!</strong>
-        <span>We've received your enquiry and will contact you within a few hours.</span>
-      </div>
-      <div class="alert-error" id="msg-error">
-        <strong>⚠️ Submission Failed</strong>
-        <span>Please try again or reach us directly on WhatsApp.</span>
-      </div>
-
-      <div class="frow">
-        <div class="fg"><label>Your Name *</label><input id="f-name" type="text" placeholder="Kamlesh Sahu"/></div>
-        <div class="fg"><label>Phone Number *</label><input id="f-phone" type="tel" placeholder="+91 77778 05172"/></div>
-      </div>
-      <div class="fg"><label>Email Address</label><input id="f-email" type="email" placeholder="you@example.com"/></div>
-      <div class="frow">
-        <div class="fg"><label>Brand</label>
-          <select id="f-brand">
-            <option value="">Select Brand</option>
-            <option>Fosroc Chemical</option>
-            <option>Asian Paints</option>
-            <option>Nuvoco & JK Lakshmi Cement</option>
-            <option>Multiple Brands</option>
-          </select>
-        </div>
-        <div class="fg"><label>Order Type</label>
-          <select id="f-type">
-            <option value="">Select Type</option>
-            <option>New Order</option>
-            <option>Product Enquiry</option>
-            <option>Bulk Purchase</option>
-            <option>Repeat Order</option>
-          </select>
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Visit Our Office</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-block">
+        <h3>Head Office – Archana Sales</h3>
+        <div class="info-row"><i class="fas fa-map-marker-alt"></i><span>Off No. 3-4, 1st Floor, Srishti Garden Commercial Complex,<br/>Ring Road No. 1, Telibandha, Raipur – 492001 (C.G.)</span></div>
+        <div class="info-row"><i class="fas fa-phone"></i><span>Tel: <a href="tel:07714009151">0771-4009151</a></span></div>
+        <div class="info-row"><i class="fas fa-mobile-alt"></i><span><a href="tel:9425508151">9425508151</a> &nbsp;|&nbsp; <a href="tel:6262825251">6262825251</a></span></div>
+        <div class="info-row"><i class="fas fa-envelope"></i><span><a href="mailto:archanasales.ryp@gmail.com">archanasales.ryp@gmail.com</a></span></div>
+        <div class="info-row"><i class="fab fa-whatsapp"></i><span><a href="https://wa.me/919425508151" target="_blank" rel="noopener">Chat on WhatsApp: +91 94255 08151</a></span></div>
+        <div class="info-row"><i class="fas fa-clock"></i><span>Mon – Sat: 10:00 AM – 7:00 PM</span></div>
+        <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="gallery.html" class="btn btn-outline-dark" style="font-size:0.85rem;padding:10px 20px"><i class="fas fa-images"></i> View Gallery</a>
+          <a href="who-we-are.html" class="btn btn-secondary" style="font-size:0.85rem;padding:10px 20px"><i class="fas fa-info-circle"></i> Who We Are</a>
         </div>
       </div>
-      <div class="fg"><label>Product Details / Message *</label>
-        <textarea id="f-message" placeholder="Tell us which products you need, quantities, and delivery location…"></textarea>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4451.293818833158!2d81.66788500996111!3d21.23717548060095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd005307e1a9%3A0x735eb1021779c0c0!2sShristhi%20Garden%20Complex!5e1!3m2!1sen!2sin!4v1781252582748!5m2!1sen!2sin"
+                title="Archana Sales office location on Google Maps"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <button class="form-btn" id="submit-btn" onclick="submitEnquiry()">Send Order Enquiry →</button>
-      <p style="font-size:.74rem;color:var(--muted);margin-top:10px;text-align:center;">
-        🔒 Your data is saved securely in our private record.
-      </p>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
-  <div class="f-brand">
-    <div class="f-mark">AS</div>
-    <div class="f-name">Archana<span></span> Sales</div>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Archana Sales — home">
+          <div><img src="assets/Logo.png" alt="Archana Sales logo" width="42" height="42" loading="lazy"/></div>
+          <div class="logo-text">
+            <div class="brand">Archana Sales</div>
+            <div class="tagline">Official Dealer &amp; Distributor</div>
+          </div>
+        </a>
+        <p>Authorised dealer and distributor of Fosroc construction chemicals, Asian Paints, Asian Paints PPG, Nuvoco Cement, JK Laxmi Cement and Jindal Panther Cement &mdash; serving builders, contractors and industry across Chhattisgarh for over 15 years.</p>
+
+        <ul class="footer-badges">
+          <li><i class="fas fa-certificate" aria-hidden="true"></i> Authorised Dealer</li>
+          <li><i class="fas fa-award" aria-hidden="true"></i> MSME Registered</li>
+          <li><i class="fas fa-shield-halved" aria-hidden="true"></i> 100% Genuine Stock</li>
+        </ul>
+
+        <div class="footer-social" role="list" aria-label="Ways to reach Archana Sales">
+          <a href="https://wa.me/919425508151" target="_blank" rel="noopener" role="listitem" aria-label="Chat with us on WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="tel:9425508151" role="listitem" aria-label="Call Archana Sales" title="Call us"><i class="fas fa-phone" aria-hidden="true"></i></a>
+          <a href="mailto:archanasales.ryp@gmail.com" role="listitem" aria-label="Email Archana Sales" title="Email us"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://maps.google.com/?q=Shristhi+Garden+Complex,+Ring+Road+No.+1,+Telibandha,+Raipur,+Chhattisgarh+492001" target="_blank" rel="noopener" role="listitem" aria-label="Get directions to our office" title="Get directions"><i class="fas fa-location-dot" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <nav class="footer-col" aria-labelledby="ft-links">
+        <h4 id="ft-links">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#brands">Our Brands</a></li>
+          <li><a href="index.html#ppg">Industrial Paints</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="who-we-are.html">Who We Are</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="our-team.html">Our Team</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="index.html#order">Get a Quote</a></li>
+        </ul>
+      </nav>
+
+      <!-- Brands -->
+      <nav class="footer-col" aria-labelledby="ft-brands">
+        <h4 id="ft-brands">Brands We Deal</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#brands">Fosroc Chemicals</a></li>
+          <li><a href="index.html#brands">Asian Paints</a></li>
+          <li><a href="index.html#ppg">Asian Paints PPG</a></li>
+          <li><a href="index.html#brands">Nuvoco Cement</a></li>
+          <li><a href="index.html#brands">JK Laxmi Cement</a></li>
+          <li><a href="index.html#brands">Jindal Panther Cement</a></li>
+        </ul>
+      </nav>
+
+      <!-- Reach us -->
+      <div class="footer-col footer-contact">
+        <h4>Reach Us</h4>
+
+        <div class="ft-row">
+          <i class="fas fa-location-dot" aria-hidden="true"></i>
+          <address>
+            Off. No. 3&ndash;4, 1st Floor,<br/>
+            Srishti Garden Commercial Complex,<br/>
+            Ring Road No.&nbsp;1, Telibandha,<br/>
+            Raipur &ndash; 492001, Chhattisgarh
+          </address>
+        </div>
+
+        <div class="ft-row">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <div>
+            <a href="tel:+919425508151">+91 94255 08151</a><br/>
+            <a href="tel:+916262825251">+91 62628 25251</a><br/>
+            <a href="tel:+917714009151">0771 &ndash; 400 9151</a>
+          </div>
+        </div>
+
+        <div class="ft-row">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <div><a href="mailto:archanasales.ryp@gmail.com">archanasales.ryp@gmail.com</a></div>
+        </div>
+
+        <div class="ft-row">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <div>Mon &ndash; Sat: 10:00 AM &ndash; 7:00 PM<br/><span class="ft-muted">Sunday closed</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Authorised dealer strip -->
+    <div class="footer-dealer">
+      <span class="fd-label">Authorised Dealer &amp; Distributor</span>
+      <ul>
+        <li>Fosroc</li>
+        <li>Asian Paints</li>
+        <li>Asian Paints PPG</li>
+        <li>Nuvoco Cement</li>
+        <li>JK Laxmi Cement</li>
+        <li>Jindal Panther Cement</li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="fb-copy">&copy; <span data-year>2026</span> Archana Sales, Raipur (C.G.). All rights reserved.</p>
+      <p class="fb-credit">Designed &amp; developed by Mr. Kamlesh Sahu</p>
+      <a class="fb-staff" href="login.html"><i class="fas fa-lock" aria-hidden="true"></i> Staff Login</a>
+    </div>
+
   </div>
-  <div class="f-chips">
-    <span class="fchip f">Fosroc</span>
-    <span class="fchip a">Asian Paints</span>
-    <span class="fchip p">Nuvoco & JK Lakshmi Cement</span>
-  </div>
-  <div class="f-copy">© 2026 Archana Sales All rights reserved.</div>
 </footer>
 
-<script>
-  // ================================================================
-  //  STEP: After deploying your Google Apps Script, paste the
-  //  Web App URL below (replace the placeholder text).
-  // ================================================================
-  const SHEET_URL = "https://script.google.com/macros/s/AKfycbwsxLPTojye6o0jXdUSNZ3n_deh3KpI0rqGY-YYzjjNjUUJSTEa1b9s8QB47UTm_BQ/exec";
+<a href="https://wa.me/919425508151?text=Hello%20Archana%20Sales%2C%20I%20am%20interested%20in%20your%20products." target="_blank" rel="noopener" class="floating-wa" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-  async function submitEnquiry() {
-    const name    = document.getElementById("f-name").value.trim();
-    const phone   = document.getElementById("f-phone").value.trim();
-    const email   = document.getElementById("f-email").value.trim();
-    const brand   = document.getElementById("f-brand").value;
-    const type    = document.getElementById("f-type").value;
-    const message = document.getElementById("f-message").value.trim();
-
-    if (!name)    { alert("Please enter your name.");           return; }
-    if (!phone)   { alert("Please enter your phone number.");   return; }
-    if (!message) { alert("Please describe your requirement."); return; }
-
-    const btn = document.getElementById("submit-btn");
-    btn.disabled    = true;
-    btn.textContent = "Submitting…";
-
-    document.getElementById("msg-success").style.display = "none";
-    document.getElementById("msg-error").style.display   = "none";
-
-    try {
-      // Google Apps Script requires no-cors mode
-      await fetch(SHEET_URL, {
-        method:  "POST",
-        mode:    "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, email, brand, orderType: type, message })
-      });
-
-      // no-cors = opaque response; treat no-throw as success
-      document.getElementById("msg-success").style.display = "block";
-      btn.textContent      = "Enquiry Sent ✓";
-      btn.style.background = "#16a34a";
-
-      // Clear fields
-      ["f-name","f-phone","f-email","f-message"].forEach(id => {
-        document.getElementById(id).value = "";
-      });
-      document.getElementById("f-brand").value = "";
-      document.getElementById("f-type").value  = "";
-
-		// Wait 5 seconds, then reload the page
-      setTimeout(() => {
-        window.location.reload();
-      }, 5000); 
-
-    } catch (err) {
-      document.getElementById("msg-error").style.display = "block";
-      btn.disabled    = false;
-      btn.textContent = "Send Order Enquiry →";
-    }
-  }
+<!-- Local business structured data (helps Google show your address, hours and phone) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HardwareStore",
+  "name": "Archana Sales",
+  "description": "Authorised dealer and distributor of Fosroc Chemicals, Asian Paints, Asian Paints PPG, Nuvoco Cement, JK Laxmi Cement and Jindal Panther Cement in Raipur, Chhattisgarh.",
+  "image": "assets/Logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Off No. 3-4, 1st Floor, Srishti Garden Commercial Complex, Ring Road No. 1, Telibandha",
+    "addressLocality": "Raipur",
+    "addressRegion": "Chhattisgarh",
+    "postalCode": "492001",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 21.2371, "longitude": 81.6678 },
+  "telephone": "+91-771-4009151",
+  "email": "archanasales.ryp@gmail.com",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "19:00"
+  }],
+  "areaServed": "Chhattisgarh, India"
+}
 </script>
+
+<script src="script.js"></script>
+<script src="enquiry.js"></script>
 </body>
 </html>
